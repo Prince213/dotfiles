@@ -32,9 +32,12 @@
             type = "8305";
             size = "100%";
             content = {
-              type = "filesystem";
-              format = "ext4";
-              mountpoint = "/";
+              type = "luks";
+              content = {
+                type = "filesystem";
+                format = "ext4";
+                mountpoint = "/";
+              };
             };
           };
         };
