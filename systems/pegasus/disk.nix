@@ -29,6 +29,7 @@
           };
           root = {
             priority = 3;
+            type = "8305";
           };
         };
       };
