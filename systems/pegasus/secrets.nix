@@ -3,6 +3,7 @@
   sops = {
     secrets = {
       psk-ShanghaiTech-IoT = { };
+      ssh-port = { };
     };
 
     defaultSopsFile = ./secrets.yaml;
