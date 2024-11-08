@@ -30,6 +30,7 @@
           root = {
             priority = 3;
             type = "8305";
+            size = "100%";
           };
         };
       };
