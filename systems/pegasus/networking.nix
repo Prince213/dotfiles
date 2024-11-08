@@ -6,6 +6,7 @@
         ShanghaiTech-IoT = {
           connection = {
             id = "ShanghaiTech-IoT";
+            type = "wifi";
           };
         };
       };
