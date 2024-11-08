@@ -3,7 +3,11 @@
     enable = true;
     ensureProfiles = {
       profiles = {
-        ShanghaiTech-IoT = { };
+        ShanghaiTech-IoT = {
+          connection = {
+            id = "ShanghaiTech-IoT";
+          };
+        };
       };
     };
   };
