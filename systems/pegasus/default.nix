@@ -9,5 +9,6 @@
   imports = [
     ./boot.nix
     ./disk.nix
+    ./networking.nix
   ];
 }
