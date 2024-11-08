@@ -4,7 +4,11 @@
       device = "/dev/mmcblk0";
       content = {
         type = "gpt";
-        partitions = { };
+        partitions = {
+          boot = {
+            priority = 1;
+          };
+        };
       };
     };
   };
