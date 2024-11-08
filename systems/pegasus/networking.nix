@@ -12,6 +12,7 @@
           wifi.ssid = "ShanghaiTech-IoT";
           wifi-security = {
             key-mgmt = "wpa-psk";
+            psk = "$PSK_ShanghaiTech_IoT";
           };
         };
       };
