@@ -2,6 +2,11 @@ keys:
   - &prince213 age1jw8zxnsgl7g7hukj6a5rk6pzyfz2uw39qxwt2ncc00sme5t3ay6qtdr5sk
   - &pegasus age10u4x9074jjv2tvwfryt9lpf4wcdtcktv9zwfxspht8yzvcsz0arsqt0t9h
 creation_rules:
+  - path_regex: systems/pegasus/secrets.yaml
+    key_groups:
+      - age:
+          - *prince213
+          - *pegasus
   - path_regex: secrets.yaml
     key_groups:
       - age:
