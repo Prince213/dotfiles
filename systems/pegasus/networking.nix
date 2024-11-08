@@ -9,6 +9,7 @@
             type = "wifi";
             autoconnect = true;
           };
+          wifi.ssid = "ShanghaiTech-IoT";
         };
       };
     };
