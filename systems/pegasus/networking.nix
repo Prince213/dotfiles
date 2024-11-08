@@ -7,6 +7,7 @@
           connection = {
             id = "ShanghaiTech-IoT";
             type = "wifi";
+            autoconnect = true;
           };
         };
       };
