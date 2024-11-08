@@ -10,6 +10,9 @@
             autoconnect = true;
           };
           wifi.ssid = "ShanghaiTech-IoT";
+          wifi-security = {
+            key-mgmt = "wpa-psk";
+          };
         };
       };
     };
