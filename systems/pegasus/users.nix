@@ -1,3 +1,9 @@
 {
-  users.users = { };
+  users.users = {
+    root = {
+      openssh.authorizedKeys.keys = [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINy2ma4uvDu/xkKzqKcAFnEYlIQQpU90YXZUKfXYcWBE"
+      ];
+    };
+  };
 }
