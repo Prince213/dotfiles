@@ -33,6 +33,7 @@
             size = "100%";
             content = {
               type = "luks";
+              passwordFile = "/tmp/disk.key";
               content = {
                 type = "filesystem";
                 format = "ext4";
