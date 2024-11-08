@@ -11,5 +11,6 @@
     ./disk.nix
     ./networking.nix
     ./secrets.nix
+    ./ssh.nix
   ];
 }
