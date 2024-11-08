@@ -4,6 +4,7 @@
       device = "/dev/mmcblk0";
       content = {
         type = "gpt";
+        efiGptPartitionFirst = false;
         partitions = {
           boot = {
             priority = 1;
