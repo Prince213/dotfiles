@@ -4,6 +4,8 @@
   networking.hostName = "pegasus";
   nixpkgs.hostPlatform = "aarch64-linux";
 
+  hardware.enableRedistributableFirmware = true;
+
   imports = [
     ./boot.nix
     ./disk.nix
