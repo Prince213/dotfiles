@@ -11,6 +11,10 @@
             type = "ef00";
             size = "512M";
             hybrid.mbrPartitionType = "0c";
+            content = {
+              type = "filesystem";
+              format = "vfat";
+            };
           };
         };
       };
