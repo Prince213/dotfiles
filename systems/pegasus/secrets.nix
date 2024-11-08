@@ -11,5 +11,9 @@
     templates.networkmanager.content = ''
       PSK_ShanghaiTech_IoT='${config.sops.placeholder.psk-ShanghaiTech-IoT}'
     '';
+
+    templates.openssh.content = ''
+      Port ${config.sops.placeholder.ssh-port}
+    '';
   };
 }
