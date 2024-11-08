@@ -1,5 +1,7 @@
 {
   disko.devices = {
-    disk.main = { };
+    disk.main = {
+      device = "/dev/mmcblk0";
+    };
   };
 }
