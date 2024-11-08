@@ -26,6 +26,7 @@
           modules = [
             ./systems/pegasus
             disko.nixosModules.disko
+            sops-nix.nixosModules.sops
           ];
         };
       };

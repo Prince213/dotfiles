@@ -10,5 +10,6 @@
     ./boot.nix
     ./disk.nix
     ./networking.nix
+    ./secrets.nix
   ];
 }
