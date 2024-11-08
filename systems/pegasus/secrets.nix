@@ -1,3 +1,5 @@
 {
-  sops = { };
+  sops = {
+    defaultSopsFile = ./secrets.yaml;
+  };
 }
