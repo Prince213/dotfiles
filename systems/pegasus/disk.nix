@@ -7,6 +7,7 @@
         partitions = {
           boot = {
             priority = 1;
+            type = "ef00";
           };
         };
       };
