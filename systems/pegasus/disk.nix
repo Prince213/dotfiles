@@ -22,6 +22,9 @@
             priority = 2;
             type = "8200";
             size = "1G";
+            content = {
+              type = "swap";
+            };
           };
         };
       };
