@@ -3,4 +3,8 @@
 
   networking.hostName = "pegasus";
   nixpkgs.hostPlatform = "aarch64-linux";
+
+  imports = [
+    ./disk.nix
+  ];
 }

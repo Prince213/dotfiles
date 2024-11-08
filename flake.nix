@@ -15,6 +15,7 @@
         pegasus = nixpkgs.lib.nixosSystem {
           modules = [
             ./systems/pegasus
+            disko.nixosModules.disko
           ];
         };
       };
