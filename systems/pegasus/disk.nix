@@ -20,6 +20,7 @@
           };
           swap = {
             priority = 2;
+            type = "8200";
           };
         };
       };
