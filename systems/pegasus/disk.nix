@@ -24,6 +24,7 @@
             size = "1G";
             content = {
               type = "swap";
+              randomEncryption = true;
             };
           };
         };
