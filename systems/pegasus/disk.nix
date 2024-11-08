@@ -32,6 +32,7 @@
             type = "8305";
             size = "100%";
             content = {
+              name = "root";
               type = "luks";
               passwordFile = "/tmp/disk.key";
               content = {
