@@ -27,6 +27,9 @@
               randomEncryption = true;
             };
           };
+          root = {
+            priority = 3;
+          };
         };
       };
     };
