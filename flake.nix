@@ -25,6 +25,7 @@
         pegasus = nixpkgs.lib.nixosSystem {
           modules = [
             ./systems/pegasus
+            ./modules/system
             disko.nixosModules.disko
             sops-nix.nixosModules.sops
           ];
@@ -32,6 +33,7 @@
         apus = nixpkgs.lib.nixosSystem {
           modules = [
             ./systems/apus
+            ./modules/system
             disko.nixosModules.disko
             sops-nix.nixosModules.sops
           ];
