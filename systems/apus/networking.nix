@@ -8,6 +8,7 @@
         SUSTech_5G = {
           connection = {
             id = "SUSTech_5G";
+            type = "wifi";
           };
         };
       };
