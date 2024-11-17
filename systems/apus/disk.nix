@@ -29,6 +29,7 @@
           data = {
             priority = 4;
             type = "0700";
+            size = "64G";
           };
         };
       };
