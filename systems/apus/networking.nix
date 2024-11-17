@@ -9,6 +9,7 @@
           connection = {
             id = "SUSTech_5G";
             type = "wifi";
+            autoconnect = true;
           };
         };
       };
