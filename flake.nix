@@ -29,6 +29,13 @@
             sops-nix.nixosModules.sops
           ];
         };
+        apus = nixpkgs.lib.nixosSystem {
+          modules = [
+            ./systems/apus
+            disko.nixosModules.disko
+            sops-nix.nixosModules.sops
+          ];
+        };
       };
 
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
