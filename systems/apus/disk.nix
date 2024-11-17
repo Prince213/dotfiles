@@ -23,6 +23,7 @@
           };
           windows = {
             priority = 3;
+            type = "0700";
           };
         };
       };
