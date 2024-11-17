@@ -35,6 +35,9 @@
             priority = 5;
             type = "8304";
             size = "100%";
+            content = {
+              type = "btrfs";
+            };
           };
         };
       };
