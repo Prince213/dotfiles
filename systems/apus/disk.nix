@@ -36,6 +36,7 @@
             type = "8304";
             size = "100%";
             content = {
+              name = "root";
               type = "luks";
               content = {
                 type = "btrfs";
