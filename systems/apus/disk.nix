@@ -21,6 +21,9 @@
             type = "0c01";
             size = "16M";
           };
+          windows = {
+            priority = 3;
+          };
         };
       };
     };
