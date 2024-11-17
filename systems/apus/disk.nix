@@ -36,8 +36,11 @@
             type = "8304";
             size = "100%";
             content = {
-              type = "btrfs";
-              mountpoint = "/";
+              type = "luks";
+              content = {
+                type = "btrfs";
+                mountpoint = "/";
+              };
             };
           };
         };
