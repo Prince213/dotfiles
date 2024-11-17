@@ -24,6 +24,7 @@
           windows = {
             priority = 3;
             type = "0700";
+            size = "192G";
           };
         };
       };
