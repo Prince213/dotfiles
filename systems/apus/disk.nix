@@ -16,6 +16,9 @@
               mountOptions = [ "umask=0077" ];
             };
           };
+          msr = {
+            priority = 2;
+          };
         };
       };
     };
