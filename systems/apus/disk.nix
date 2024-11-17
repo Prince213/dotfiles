@@ -18,6 +18,7 @@
           };
           msr = {
             priority = 2;
+            type = "0c01";
           };
         };
       };
