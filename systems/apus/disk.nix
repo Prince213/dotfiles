@@ -9,6 +9,10 @@
             priority = 1;
             type = "ef00";
             size = "1G";
+            content = {
+              type = "filesystem";
+              format = "vfat";
+            };
           };
         };
       };
