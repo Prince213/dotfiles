@@ -19,6 +19,7 @@
           msr = {
             priority = 2;
             type = "0c01";
+            size = "16M";
           };
         };
       };
