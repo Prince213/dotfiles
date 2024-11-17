@@ -11,6 +11,7 @@
             type = "wifi";
             autoconnect = true;
           };
+          wifi.ssid = "SUSTech_5G";
         };
       };
     };
