@@ -37,6 +37,7 @@
             size = "100%";
             content = {
               type = "btrfs";
+              mountpoint = "/";
             };
           };
         };
