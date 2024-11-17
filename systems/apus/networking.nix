@@ -4,6 +4,11 @@
     enable = true;
     ensureProfiles = {
       environmentFiles = [ config.sops.templates.networkmanager.path ];
+      profiles = {
+        SUSTech_5G = {
+
+        };
+      };
     };
   };
 }
