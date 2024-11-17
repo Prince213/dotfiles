@@ -3,6 +3,12 @@ keys:
   - &apus age1w4q307t786mn7a2xdvjqh3knasw353z986d8hkjxmqtyt8fp3a8q0sn4yq
   - &pegasus age10u4x9074jjv2tvwfryt9lpf4wcdtcktv9zwfxspht8yzvcsz0arsqt0t9h
 creation_rules:
+  - path_regex: systems/apus/secrets.yaml
+    key_groups:
+      - age:
+          - *apus
+        pgp:
+          - *prince213
   - path_regex: systems/pegasus/secrets.yaml
     key_groups:
       - age:
