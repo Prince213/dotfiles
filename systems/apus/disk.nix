@@ -38,6 +38,7 @@
             content = {
               name = "root";
               type = "luks";
+              passwordFile = "/tmp/disk.key";
               content = {
                 type = "btrfs";
                 mountpoint = "/";
