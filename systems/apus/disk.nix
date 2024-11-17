@@ -5,7 +5,9 @@
       content = {
         type = "gpt";
         partitions = {
-
+          boot = {
+            priority = 1;
+          };
         };
       };
     };
