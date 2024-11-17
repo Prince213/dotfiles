@@ -31,6 +31,9 @@
             type = "0700";
             size = "64G";
           };
+          root = {
+            priority = 5;
+          };
         };
       };
     };
