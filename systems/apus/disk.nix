@@ -12,6 +12,7 @@
             content = {
               type = "filesystem";
               format = "vfat";
+              mountpoint = "/boot";
             };
           };
         };
