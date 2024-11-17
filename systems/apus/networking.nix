@@ -14,6 +14,7 @@
           wifi.ssid = "SUSTech_5G";
           wifi-security = {
             key-mgmt = "wpa-psk";
+            psk = "$PSK_SUSTech_5G";
           };
         };
       };
