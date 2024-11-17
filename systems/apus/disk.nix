@@ -33,6 +33,7 @@
           };
           root = {
             priority = 5;
+            type = "8304";
           };
         };
       };
