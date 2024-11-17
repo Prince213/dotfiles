@@ -6,7 +6,9 @@
       environmentFiles = [ config.sops.templates.networkmanager.path ];
       profiles = {
         SUSTech_5G = {
-
+          connection = {
+            id = "SUSTech_5G";
+          };
         };
       };
     };
