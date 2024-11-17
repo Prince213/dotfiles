@@ -26,6 +26,9 @@
             type = "0700";
             size = "192G";
           };
+          data = {
+            priority = 4;
+          };
         };
       };
     };
