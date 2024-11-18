@@ -9,5 +9,6 @@
     ./disk.nix
     ./networking.nix
     ./secrets.nix
+    ./users.nix
   ];
 }
