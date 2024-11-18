@@ -6,4 +6,8 @@
     enable = lib.mkDefault true;
     configurationLimit = 3;
   };
+
+  services.tailscale.extraDaemonFlags = lib.mkDefault [
+    "--no-logs-no-support"
+  ];
 }

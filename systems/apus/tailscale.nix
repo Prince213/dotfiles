@@ -1,8 +1,3 @@
 {
-  services.tailscale = {
-    enable = true;
-    extraDaemonFlags = [
-      "--no-logs-no-support"
-    ];
-  };
+  services.tailscale.enable = true;
 }
