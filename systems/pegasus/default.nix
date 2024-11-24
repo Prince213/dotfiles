@@ -11,7 +11,6 @@
     ./packages.nix
     ./secrets.nix
     ./ssh.nix
-    ./tailscale.nix
     ./users.nix
   ];
 }
