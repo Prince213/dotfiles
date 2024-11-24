@@ -4,5 +4,6 @@
       "nix-command"
       "flakes"
     ];
+    substituters = [ "https://mirror.sjtu.edu.cn/nix-channels/store" ];
   };
 }
