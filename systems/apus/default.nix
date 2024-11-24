@@ -7,6 +7,7 @@
   imports = [
     ./boot.nix
     ./disk.nix
+    ./graphics.nix
     ./networking.nix
     ./packages.nix
     ./secrets.nix
