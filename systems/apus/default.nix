@@ -10,7 +10,6 @@
     ./networking.nix
     ./packages.nix
     ./secrets.nix
-    ./tailscale.nix
     ./users.nix
   ];
 }
