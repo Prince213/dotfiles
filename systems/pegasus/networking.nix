@@ -8,6 +8,7 @@
         ShanghaiTech-IoT = {
           connection = {
             id = "ShanghaiTech-IoT";
+            uuid = "8eb2a392-c5b9-4083-9d9c-38c0d9027146";
             type = "wifi";
             autoconnect = true;
           };
