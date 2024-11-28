@@ -1,2 +1,3 @@
 {
+  home.username = "prince213";
 }
