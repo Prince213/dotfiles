@@ -10,6 +10,7 @@
     ./boot.nix
     ./disk.nix
     ./graphics.nix
+    ./i18n.nix
     ./networking.nix
     ./packages.nix
     ./secrets.nix
