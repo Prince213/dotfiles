@@ -5,4 +5,6 @@
     extraGroups = [ "wheel" ];
     shell = pkgs.zsh;
   };
+
+  nix.settings.trusted-users = [ "prince213" ];
 }
