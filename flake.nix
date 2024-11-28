@@ -23,6 +23,7 @@
       nixpkgs,
       disko,
       sops-nix,
+      home-manager,
       ...
     }:
     {
@@ -41,6 +42,16 @@
             ./modules/system
             disko.nixosModules.disko
             sops-nix.nixosModules.sops
+          ];
+        };
+      };
+
+      homeConfigurations = {
+        "prince213@apus" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          modules = [
+            ./homes/apus
+            sops-nix.homeManagerModule
           ];
         };
       };
