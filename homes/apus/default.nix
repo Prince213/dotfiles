@@ -8,4 +8,8 @@
   };
 
   programs.home-manager.enable = true;
+
+  imports = [
+    ./zsh.nix
+  ];
 }
