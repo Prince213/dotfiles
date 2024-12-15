@@ -9,6 +9,7 @@
       in
       with extensions.vscode-marketplace;
       [
+        teabyii.ayu
         github.copilot
         mkhl.direnv
         eamodio.gitlens
