@@ -2,6 +2,7 @@
 {
   imports = [
     ./nix.nix
+    ./ssh.nix
   ];
 
   hardware.enableRedistributableFirmware = lib.mkDefault true;
@@ -12,8 +13,6 @@
     enable = lib.mkDefault true;
     configurationLimit = lib.mkDefault 3;
   };
-
-  services.openssh.enable = lib.mkDefault true;
 
   services.tailscale.extraDaemonFlags = lib.mkDefault [
     "--no-logs-no-support"
