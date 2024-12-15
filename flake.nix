@@ -32,36 +32,46 @@
       treefmt-nix,
       ...
     }:
-    {
-      nixosConfigurations = {
-        pegasus = nixpkgs.lib.nixosSystem {
-          modules = [
-            ./systems/pegasus
-            ./modules/system
-            disko.nixosModules.disko
-            sops-nix.nixosModules.sops
-          ];
+    (
+      {
+        nixosConfigurations = {
+          pegasus = nixpkgs.lib.nixosSystem {
+            modules = [
+              ./systems/pegasus
+              ./modules/system
+              disko.nixosModules.disko
+              sops-nix.nixosModules.sops
+            ];
+          };
+          apus = nixpkgs.lib.nixosSystem {
+            modules = [
+              ./systems/apus
+              ./modules/system
+              disko.nixosModules.disko
+              sops-nix.nixosModules.sops
+            ];
+          };
         };
-        apus = nixpkgs.lib.nixosSystem {
-          modules = [
-            ./systems/apus
-            ./modules/system
-            disko.nixosModules.disko
-            sops-nix.nixosModules.sops
-          ];
-        };
-      };
 
-      homeConfigurations = {
-        "prince213@apus" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          modules = [
-            ./homes/apus
-            sops-nix.homeManagerModule
-          ];
+        homeConfigurations = {
+          "prince213@apus" = home-manager.lib.homeManagerConfiguration {
+            pkgs = nixpkgs.legacyPackages.x86_64-linux;
+            modules = [
+              ./homes/apus
+              sops-nix.homeManagerModule
+            ];
+          };
         };
-      };
 
-      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
-    };
+      }
+      // (
+        let
+          system = "x86_64-linux";
+          treefmtEval = treefmt-nix.lib.evalModule nixpkgs.legacyPackages.${system} ./treefmt.nix;
+        in
+        {
+          formatter.${system} = treefmtEval.config.build.wrapper;
+        }
+      )
+    );
 }
