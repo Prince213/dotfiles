@@ -4,6 +4,8 @@
     ./nix.nix
   ];
 
+  hardware.enableRedistributableFirmware = true;
+
   boot.kernelPackages = lib.mkDefault pkgs.linuxPackages_latest;
 
   boot.loader.systemd-boot = {
