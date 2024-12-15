@@ -13,6 +13,7 @@
     ./firefox.nix
     ./gpg.nix
     ./packages.nix
+    ./vscode.nix
     ./zsh.nix
   ];
 }
