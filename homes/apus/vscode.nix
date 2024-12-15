@@ -10,6 +10,7 @@
       with extensions.vscode-marketplace;
       [
         mkhl.direnv
+        eamodio.gitlens
       ];
   };
 }
