@@ -7,6 +7,7 @@
   programs.ripgrep.enable = true;
 
   home.packages = with pkgs; [
+    clash-nyanpasu
     localsend
   ];
 
