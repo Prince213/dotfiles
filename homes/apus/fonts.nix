@@ -8,5 +8,9 @@
 
   fonts.fontconfig = {
     enable = true;
+    defaultFonts = {
+      serif = [ "Noto Serif CJK SC" ];
+      sansSerif = [ "Noto Sans CJK SC" ];
+    };
   };
 }
