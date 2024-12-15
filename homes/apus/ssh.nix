@@ -11,6 +11,12 @@
         identityFile = config.sops.secrets.nun-ssh-root-key.path;
         identitiesOnly = true;
       };
+      sourcehut = {
+        host = "git.sr.ht";
+        user = "git";
+        identityFile = config.sops.secrets.sourcehut-ssh-git-key.path;
+        identitiesOnly = true;
+      };
     };
   };
 
