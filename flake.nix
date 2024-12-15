@@ -78,9 +78,16 @@
       // (
         let
           system = "x86_64-linux";
-          treefmtEval = treefmt-nix.lib.evalModule nixpkgs.legacyPackages.${system} ./treefmt.nix;
+          pkgs = nixpkgs.legacyPackages.${system};
+          treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
         in
         {
+          devShells.${system}.default = pkgs.mkShellNoCC {
+            packages = with pkgs; [
+              sops
+            ];
+          };
+
           formatter.${system} = treefmtEval.config.build.wrapper;
         }
       )
