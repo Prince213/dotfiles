@@ -12,6 +12,7 @@
   imports = [
     ./direnv.nix
     ./firefox.nix
+    ./git.nix
     ./gpg.nix
     ./packages.nix
     ./vscode.nix
