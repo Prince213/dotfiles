@@ -10,6 +10,7 @@
   programs.home-manager.enable = true;
 
   imports = [
+    ./firefox.nix
     ./packages.nix
     ./zsh.nix
   ];
