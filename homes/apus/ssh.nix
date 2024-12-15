@@ -11,6 +11,14 @@
         identityFile = config.sops.secrets.nun-ssh-root-key.path;
         identitiesOnly = true;
       };
+      github = {
+        host = "github.com";
+        hostname = "ssh.github.com";
+        port = 443;
+        user = "git";
+        identityFile = config.sops.secrets.github-ssh-git-key.path;
+        identitiesOnly = true;
+      };
       sourcehut = {
         host = "git.sr.ht";
         user = "git";
