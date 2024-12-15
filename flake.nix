@@ -21,11 +21,6 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    nix-vscode-extensions = {
-      url = "github:nix-community/nix-vscode-extensions";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -35,7 +30,6 @@
       sops-nix,
       home-manager,
       treefmt-nix,
-      nix-vscode-extensions,
       ...
     }:
     (
@@ -62,11 +56,6 @@
         homeConfigurations = {
           "prince213@apus" = home-manager.lib.homeManagerConfiguration {
             pkgs = nixpkgs.legacyPackages.x86_64-linux;
-
-            extraSpecialArgs = {
-              inherit nix-vscode-extensions;
-            };
-
             modules = [
               ./homes/apus
               sops-nix.homeManagerModule
