@@ -9,6 +9,7 @@
       in
       with extensions.vscode-marketplace;
       [
+        mkhl.direnv
       ];
   };
 }
