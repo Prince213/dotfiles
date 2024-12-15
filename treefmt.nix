@@ -4,6 +4,7 @@
   settings.global.excludes = [
     "LICENSE"
     "README.md"
+    ".envrc"
     "homes/apus/p10k.zsh"
   ];
 
