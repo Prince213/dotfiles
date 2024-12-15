@@ -16,6 +16,7 @@
     ./git.nix
     ./gpg.nix
     ./packages.nix
+    ./secrets.nix
     ./vscode.nix
     ./wezterm.nix
     ./zsh.nix
