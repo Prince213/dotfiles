@@ -11,6 +11,7 @@
 
   imports = [
     ./firefox.nix
+    ./gpg.nix
     ./packages.nix
     ./zsh.nix
   ];
