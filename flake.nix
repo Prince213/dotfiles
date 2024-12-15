@@ -21,6 +21,11 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -30,6 +35,7 @@
       sops-nix,
       home-manager,
       treefmt-nix,
+      nix-vscode-extensions,
       ...
     }:
     (
