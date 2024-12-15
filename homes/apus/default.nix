@@ -17,6 +17,7 @@
     ./gpg.nix
     ./packages.nix
     ./secrets.nix
+    ./ssh.nix
     ./vscode.nix
     ./wezterm.nix
     ./zsh.nix
