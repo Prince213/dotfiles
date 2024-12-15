@@ -9,6 +9,7 @@
       in
       with extensions.vscode-marketplace;
       [
+        github.copilot
         mkhl.direnv
         eamodio.gitlens
         jnoortheen.nix-ide
