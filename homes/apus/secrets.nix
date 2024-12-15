@@ -1,3 +1,4 @@
+{ config, ... }:
 {
   sops = {
     secrets = {
@@ -5,5 +6,7 @@
     };
 
     defaultSopsFile = ../../secrets.yaml;
+
+    gnupg.home = config.programs.gpg.homedir;
   };
 }
