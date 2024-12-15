@@ -31,8 +31,9 @@
   };
 
   outputs =
-    {
+    inputs@{
       nixpkgs,
+      flake-parts,
       disko,
       sops-nix,
       home-manager,
@@ -40,58 +41,60 @@
       wezterm,
       ...
     }:
-    (
+    flake-parts.lib.mkFlake { inherit inputs; } (
+      { withSystem, ... }:
       {
-        nixosConfigurations = {
-          pegasus = nixpkgs.lib.nixosSystem {
-            modules = [
-              ./systems/pegasus
-              ./modules/system
-              disko.nixosModules.disko
-              sops-nix.nixosModules.sops
-            ];
+        flake = {
+          nixosConfigurations = {
+            pegasus = nixpkgs.lib.nixosSystem {
+              modules = [
+                ./systems/pegasus
+                ./modules/system
+                disko.nixosModules.disko
+                sops-nix.nixosModules.sops
+              ];
+            };
+            apus = nixpkgs.lib.nixosSystem {
+              modules = [
+                ./systems/apus
+                ./modules/system
+                disko.nixosModules.disko
+                sops-nix.nixosModules.sops
+              ];
+            };
           };
-          apus = nixpkgs.lib.nixosSystem {
-            modules = [
-              ./systems/apus
-              ./modules/system
-              disko.nixosModules.disko
-              sops-nix.nixosModules.sops
-            ];
-          };
+          homeConfigurations."prince213@apus" = withSystem "x86_64-linux" (
+            { pkgs, ... }:
+            home-manager.lib.homeManagerConfiguration {
+              inherit pkgs;
+
+              extraSpecialArgs = {
+                inherit wezterm;
+              };
+
+              modules = [
+                ./homes/apus
+                sops-nix.homeManagerModule
+              ];
+            }
+          );
         };
-
-        homeConfigurations = {
-          "prince213@apus" = home-manager.lib.homeManagerConfiguration {
-            pkgs = nixpkgs.legacyPackages.x86_64-linux;
-
-            extraSpecialArgs = {
-              inherit wezterm;
+        systems = [ "x86_64-linux" ];
+        perSystem =
+          { pkgs, ... }:
+          {
+            devShells.default = pkgs.mkShellNoCC {
+              packages = with pkgs; [
+                sops
+              ];
             };
 
-            modules = [
-              ./homes/apus
-              sops-nix.homeManagerModule
-            ];
+            formatter =
+              let
+                treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
+              in
+              treefmtEval.config.build.wrapper;
           };
-        };
-
       }
-      // (
-        let
-          system = "x86_64-linux";
-          pkgs = nixpkgs.legacyPackages.${system};
-          treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
-        in
-        {
-          devShells.${system}.default = pkgs.mkShellNoCC {
-            packages = with pkgs; [
-              sops
-            ];
-          };
-
-          formatter.${system} = treefmtEval.config.build.wrapper;
-        }
-      )
     );
 }
