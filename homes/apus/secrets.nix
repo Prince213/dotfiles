@@ -4,6 +4,7 @@
     secrets = {
       ssh-config = { };
       nun-ssh-root-key = { };
+      github-ssh-git-key = { };
       sourcehut-ssh-git-key = { };
     };
 
