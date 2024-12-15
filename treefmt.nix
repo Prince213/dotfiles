@@ -4,6 +4,7 @@
   settings.global.excludes = [
     "LICENSE"
     "README.md"
+    "homes/apus/p10k.zsh"
   ];
 
   programs = {
