@@ -10,6 +10,7 @@
   programs.home-manager.enable = true;
 
   imports = [
+    ./direnv.nix
     ./firefox.nix
     ./gpg.nix
     ./packages.nix
