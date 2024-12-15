@@ -62,6 +62,11 @@
         homeConfigurations = {
           "prince213@apus" = home-manager.lib.homeManagerConfiguration {
             pkgs = nixpkgs.legacyPackages.x86_64-linux;
+
+            extraSpecialArgs = {
+              inherit nix-vscode-extensions;
+            };
+
             modules = [
               ./homes/apus
               sops-nix.homeManagerModule
