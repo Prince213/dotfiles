@@ -11,6 +11,7 @@
       [
         mkhl.direnv
         eamodio.gitlens
+        jnoortheen.nix-ide
       ];
   };
 }
