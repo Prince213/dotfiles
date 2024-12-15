@@ -1,0 +1,6 @@
+{ wezterm, ... }:
+{
+  programs.wezterm = {
+
+  };
+}

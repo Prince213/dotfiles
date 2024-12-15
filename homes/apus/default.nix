@@ -17,6 +17,7 @@
     ./gpg.nix
     ./packages.nix
     ./vscode.nix
+    ./wezterm.nix
     ./zsh.nix
   ];
 }
