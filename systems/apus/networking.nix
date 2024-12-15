@@ -1,5 +1,7 @@
 { config, ... }:
 {
+  networking.firewall.enable = false;
+
   networking.networkmanager = {
     enable = true;
     ensureProfiles = {
