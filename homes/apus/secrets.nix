@@ -2,6 +2,7 @@
 {
   sops = {
     secrets = {
+      ssh-config = { };
       nun-ssh-root-key = { };
     };
 
