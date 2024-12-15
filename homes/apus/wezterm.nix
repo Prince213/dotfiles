@@ -10,6 +10,7 @@
       config.font = wezterm.font_with_fallback {
         'MonaspiceAr Nerd Font',
       }
+      config.font_size = 11.0
 
       return config
     '';
