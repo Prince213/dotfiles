@@ -9,6 +9,7 @@
   home.packages = with pkgs; [
     clash-nyanpasu
     localsend
+    telegram-desktop
   ];
 
   nixpkgs.config.allowUnfreePredicate =
