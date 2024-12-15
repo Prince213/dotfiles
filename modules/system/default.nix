@@ -13,6 +13,8 @@
     configurationLimit = 3;
   };
 
+  services.openssh.enable = true;
+
   services.tailscale.extraDaemonFlags = lib.mkDefault [
     "--no-logs-no-support"
   ];
