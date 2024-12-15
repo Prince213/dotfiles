@@ -3,5 +3,12 @@
   programs.vscode = {
     enable = true;
     package = pkgs.vscode-fhs;
+    extensions =
+      let
+        extensions = nix-vscode-extensions.extensions.${pkgs.system};
+      in
+      with extensions.vscode-marketplace;
+      [
+      ];
   };
 }
