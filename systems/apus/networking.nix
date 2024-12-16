@@ -2,6 +2,8 @@
 {
   networking.firewall.enable = false;
 
+  networking.proxy.default = "http://127.0.0.1:7890";
+
   networking.networkmanager = {
     enable = true;
     ensureProfiles = {
