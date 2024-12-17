@@ -64,11 +64,12 @@
             };
           };
           homeConfigurations."prince213@apus" = withSystem "x86_64-linux" (
-            { pkgs, ... }:
+            { config, pkgs, ... }:
             home-manager.lib.homeManagerConfiguration {
               inherit pkgs;
 
               extraSpecialArgs = {
+                inherit (config) packages;
                 inherit wezterm;
               };
 

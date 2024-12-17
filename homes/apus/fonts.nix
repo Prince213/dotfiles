@@ -1,9 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, packages, ... }:
 {
   home.packages = with pkgs; [
     iosevka
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
+    packages.wubi98-fonts
   ];
 
   fonts.fontconfig = {
