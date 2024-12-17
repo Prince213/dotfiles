@@ -83,6 +83,8 @@
         perSystem =
           { pkgs, ... }:
           {
+            packages.wubi98-fonts = pkgs.callPackage ./pkgs/wubi98-fonts.nix { };
+
             devShells.default = pkgs.mkShellNoCC {
               packages = with pkgs; [
                 sops
