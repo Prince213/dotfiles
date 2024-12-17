@@ -8,7 +8,7 @@
       local config = wezterm.config_builder()
 
       config.font = wezterm.font_with_fallback {
-        'MonaspiceAr Nerd Font',
+        'Iosevka',
       }
       config.font_size = 11.0
 
