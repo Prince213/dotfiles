@@ -2,7 +2,6 @@
 {
   home.packages = with pkgs; [
     iosevka
-    nerd-fonts.monaspace
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
   ];
