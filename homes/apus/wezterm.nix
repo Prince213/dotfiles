@@ -11,6 +11,7 @@
 
       config.font = wezterm.font_with_fallback {
         'Iosevka',
+        'Noto Sans Mono CJK SC',
       }
       config.font_size = 11.0
 
