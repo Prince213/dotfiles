@@ -10,6 +10,7 @@
   programs.home-manager.enable = true;
 
   imports = [
+    ./chrome.nix
     ./direnv.nix
     ./firefox.nix
     ./fonts.nix
