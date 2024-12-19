@@ -1,5 +1,16 @@
 { config, ... }:
 {
+  networking.firewall = {
+    allowedTCPPorts = [
+      # localsend
+      53317
+    ];
+    allowedUDPPorts = [
+      # localsend
+      53317
+    ];
+  };
+
   networking.proxy.default = "http://127.0.0.1:7890";
 
   networking.networkmanager = {
