@@ -28,6 +28,11 @@
       url = "github:wez/wezterm?dir=nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    neovim-nightly = {
+      url = "github:nix-community/neovim-nightly-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -39,6 +44,7 @@
       home-manager,
       treefmt-nix,
       wezterm,
+      neovim-nightly,
       ...
     }:
     flake-parts.lib.mkFlake { inherit inputs; } (
