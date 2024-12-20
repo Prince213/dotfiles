@@ -77,6 +77,7 @@
               extraSpecialArgs = {
                 inherit (config) packages;
                 inherit wezterm;
+                inherit neovim-nightly;
               };
 
               modules = [
