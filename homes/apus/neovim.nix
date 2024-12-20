@@ -3,5 +3,6 @@
   programs.nixvim = {
     enable = true;
     package = neovim-nightly.packages.${pkgs.system}.default;
+    defaultEditor = true;
   };
 }
