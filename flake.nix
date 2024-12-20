@@ -89,6 +89,7 @@
               modules = [
                 ./homes/apus
                 sops-nix.homeManagerModule
+                nixvim.homeManagerModules.nixvim
               ];
             }
           );

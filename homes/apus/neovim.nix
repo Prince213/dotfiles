@@ -1,6 +1,6 @@
 { pkgs, neovim-nightly, ... }:
 {
-  programs.neovim = {
+  programs.nixvim = {
     enable = true;
     package = neovim-nightly.packages.${pkgs.system}.default;
   };
