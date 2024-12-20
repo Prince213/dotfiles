@@ -6,5 +6,11 @@
     defaultEditor = true;
 
     colorschemes.tokyonight.enable = true;
+
+    plugins = {
+      treesitter = {
+        enable = true;
+      };
+    };
   };
 }
