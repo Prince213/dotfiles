@@ -15,6 +15,15 @@
         {
           enable = true;
           inherit package;
+          grammarPackages = with package.builtGrammars; [
+            c
+            lua
+            markdown
+            markdown_inline
+            query
+            vim
+            vimdoc
+          ];
         };
     };
   };
