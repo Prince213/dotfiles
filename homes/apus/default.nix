@@ -16,6 +16,7 @@
     ./fonts.nix
     ./git.nix
     ./gpg.nix
+    ./nix.nix
     ./packages.nix
     ./secrets.nix
     ./ssh.nix
