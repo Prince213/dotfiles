@@ -8,9 +8,14 @@
     colorschemes.tokyonight.enable = true;
 
     plugins = {
-      treesitter = {
-        enable = true;
-      };
+      treesitter =
+        let
+          package = pkgs.vimPlugins.nvim-treesitter;
+        in
+        {
+          enable = true;
+          inherit package;
+        };
     };
   };
 }
