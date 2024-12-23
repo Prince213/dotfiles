@@ -9,6 +9,7 @@
 
     opts = {
       expandtab = true;
+      shiftwidth = 2;
     };
 
     plugins = {
