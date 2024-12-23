@@ -14,6 +14,12 @@
       shiftwidth = 2;
     };
 
+    filetype = {
+      extension = {
+        beancount = "bc";
+      };
+    };
+
     plugins = {
       neo-tree.enable = true;
 
