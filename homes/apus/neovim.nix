@@ -26,6 +26,7 @@
           inherit package;
           grammarPackages = with package.builtGrammars; [
             c
+            latex
             lua
             markdown
             markdown_inline
