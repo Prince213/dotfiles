@@ -5,7 +5,7 @@
     package = neovim-nightly.packages.${pkgs.system}.default;
     defaultEditor = true;
 
-    colorschemes.tokyonight.enable = true;
+    colorschemes.ayu.enable = true;
 
     opts = {
       expandtab = true;
