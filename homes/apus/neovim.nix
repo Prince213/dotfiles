@@ -7,6 +7,10 @@
 
     colorschemes.tokyonight.enable = true;
 
+    opts = {
+      expandtab = true;
+    };
+
     plugins = {
       neo-tree.enable = true;
 
