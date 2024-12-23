@@ -8,6 +8,8 @@
     colorschemes.tokyonight.enable = true;
 
     plugins = {
+      neo-tree.enable = true;
+
       treesitter =
         let
           package = pkgs.vimPlugins.nvim-treesitter;
