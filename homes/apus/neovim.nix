@@ -25,6 +25,7 @@
           enable = true;
           inherit package;
           grammarPackages = with package.builtGrammars; [
+            beancount
             c
             latex
             lua
