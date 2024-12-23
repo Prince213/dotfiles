@@ -9,6 +9,9 @@
 
     opts = {
       expandtab = true;
+      listchars = {
+        space = "·";
+      };
       list = true;
       number = true;
       relativenumber = true;
