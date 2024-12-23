@@ -27,6 +27,8 @@
     plugins = {
       indent-blankline.enable = true;
 
+      leap.enable = true;
+
       neo-tree.enable = true;
 
       treesitter =
