@@ -25,6 +25,8 @@
     };
 
     plugins = {
+      indent-blankline.enable = true;
+
       neo-tree.enable = true;
 
       treesitter =
