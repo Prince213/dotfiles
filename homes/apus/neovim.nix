@@ -5,7 +5,7 @@
     package = neovim-nightly.packages.${pkgs.system}.default;
     defaultEditor = true;
 
-    colorschemes.ayu.enable = true;
+    colorschemes.gruvbox.enable = true;
 
     opts = {
       expandtab = true;
