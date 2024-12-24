@@ -25,6 +25,8 @@
     };
 
     plugins = {
+      image.enable = true;
+
       indent-blankline.enable = true;
 
       leap.enable = true;
