@@ -78,5 +78,9 @@
     extraPlugins = with pkgs.vimPlugins; [
       tabby-nvim
     ];
+
+    extraConfigLua = ''
+      require("tabby").setup { preset = "active_wins_at_tail" }
+    '';
   };
 }
