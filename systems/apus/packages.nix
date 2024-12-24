@@ -2,6 +2,11 @@
 {
   hardware.bluetooth.enable = true;
 
+  programs.kde-pim = {
+    enable = true;
+    merkuro = true;
+  };
+
   programs.steam.enable = true;
 
   services.tailscale.enable = true;
