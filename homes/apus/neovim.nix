@@ -74,5 +74,9 @@
 
       web-devicons.enable = true;
     };
+
+    extraPlugins = with pkgs.vimPlugins; [
+      tabby-nvim
+    ];
   };
 }
