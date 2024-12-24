@@ -5,7 +5,7 @@
     package = neovim-nightly.packages.${pkgs.system}.default;
     defaultEditor = true;
 
-    colorschemes.gruvbox.enable = true;
+    colorschemes.nightfox.enable = true;
 
     globals = rec {
       mapleader = ",";
