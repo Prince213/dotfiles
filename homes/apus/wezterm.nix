@@ -10,7 +10,7 @@
       config.hide_tab_bar_if_only_one_tab = true
 
       config.font = wezterm.font_with_fallback {
-        'Iosevka',
+        'Iosevka Term',
         'Noto Sans Mono CJK SC',
       }
       config.font_size = 11.0
