@@ -5,7 +5,10 @@
     package = neovim-nightly.packages.${pkgs.system}.default;
     defaultEditor = true;
 
-    colorschemes.nightfox.enable = true;
+    colorschemes.nightfox = {
+      enable = true;
+      flavor = "dayfox";
+    };
 
     globals = rec {
       mapleader = ",";
