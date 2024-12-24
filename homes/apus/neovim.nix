@@ -56,6 +56,8 @@
           ];
         };
 
+      vimtex.enable = true;
+
       web-devicons.enable = true;
     };
   };
