@@ -46,7 +46,14 @@
       image.enable = true;
       indent-blankline.enable = true;
       leap.enable = true;
-      lsp.enable = true;
+
+      lsp = {
+        enable = true;
+        servers = {
+          clangd.enable = true;
+        };
+      };
+
       lualine.enable = true;
       neo-tree.enable = true;
 
