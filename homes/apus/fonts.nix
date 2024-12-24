@@ -1,7 +1,7 @@
 { pkgs, packages, ... }:
 {
   home.packages = with pkgs; [
-    iosevka
+    iosevka-bin
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
     packages.wubi98-fonts
