@@ -65,6 +65,7 @@
         enable = true;
         keymaps = {
           lspBuf = {
+            "<Leader>ca" = "code_action";
             "<Leader>f" = "format";
           };
         };
