@@ -47,6 +47,7 @@
         settings = {
           mapping = {
             "<C-Space>" = "cmp.mapping.complete()";
+            "<Tab>" = "cmp.mapping.select_next_item()";
             "<CR>" = "cmp.mapping.confirm { select = true }";
           };
           sources = [
