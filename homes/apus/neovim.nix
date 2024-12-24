@@ -39,13 +39,9 @@
 
     plugins = {
       image.enable = true;
-
       indent-blankline.enable = true;
-
       leap.enable = true;
-
       lsp.enable = true;
-
       neo-tree.enable = true;
 
       treesitter =
