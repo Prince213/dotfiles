@@ -21,6 +21,7 @@
       number = true;
       relativenumber = true;
       shiftwidth = 2;
+      showtabline = 2;
     };
 
     keymaps = [
