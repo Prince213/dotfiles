@@ -7,6 +7,10 @@
 
     colorschemes.gruvbox.enable = true;
 
+    globals = {
+      mapleader = ",";
+    };
+
     opts = {
       expandtab = true;
       listchars = {
