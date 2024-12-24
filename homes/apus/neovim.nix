@@ -63,6 +63,11 @@
 
       lsp = {
         enable = true;
+        keymaps = {
+          lspBuf = {
+            "<Leader>f" = "format";
+          };
+        };
         servers = {
           clangd = {
             enable = true;
