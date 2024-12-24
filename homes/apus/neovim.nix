@@ -22,6 +22,14 @@
       shiftwidth = 2;
     };
 
+    keymaps = [
+      {
+        mode = "n";
+        key = "<Leader>e";
+        action = "<Cmd>Neotree toggle<CR>";
+      }
+    ];
+
     filetype = {
       extension = {
         beancount = "bc";
