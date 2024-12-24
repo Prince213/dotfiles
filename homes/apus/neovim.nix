@@ -44,6 +44,11 @@
     plugins = {
       cmp = {
         enable = true;
+        settings = {
+          sources = [
+            { name = "nvim_lsp"; }
+          ];
+        };
       };
 
       gitsigns.enable = true;
