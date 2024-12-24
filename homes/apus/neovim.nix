@@ -45,6 +45,9 @@
       cmp = {
         enable = true;
         settings = {
+          mapping = {
+            "<CR>" = "cmp.mapping.confirm { select = true }";
+          };
           sources = [
             { name = "nvim_lsp"; }
           ];
