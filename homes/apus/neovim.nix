@@ -7,8 +7,9 @@
 
     colorschemes.gruvbox.enable = true;
 
-    globals = {
+    globals = rec {
       mapleader = ",";
+      maplocalleader = mapleader;
     };
 
     opts = {
