@@ -48,6 +48,7 @@
         settings = {
           mapping = {
             "<C-Space>" = "cmp.mapping.complete()";
+            "<S-Tab>" = "cmp.mapping.select_prev_item()";
             "<Tab>" = "cmp.mapping.select_next_item()";
             "<CR>" = "cmp.mapping.confirm { select = true }";
           };
