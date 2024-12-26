@@ -19,6 +19,7 @@
       expandtab = true;
       listchars = {
         space = "·";
+        tab = ">-";
       };
       list = true;
       number = true;
