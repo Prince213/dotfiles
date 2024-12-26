@@ -76,6 +76,7 @@
             package = null;
           };
           gopls.enable = true;
+          nixd.enable = true;
         };
       };
 
