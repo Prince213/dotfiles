@@ -8,6 +8,8 @@
 
   programs.ripgrep.enable = true;
 
+  programs.tmux.enable = true;
+
   home.packages = with pkgs; [
     clash-nyanpasu
     wl-clipboard
