@@ -2,6 +2,8 @@
 {
   programs.fastfetch.enable = true;
 
+  programs.go.enable = true;
+
   programs.nh.enable = true;
 
   programs.ripgrep.enable = true;
