@@ -112,6 +112,7 @@
     };
 
     extraPlugins = with pkgs.vimPlugins; [
+      dropbar-nvim
       tabby-nvim
     ];
 
