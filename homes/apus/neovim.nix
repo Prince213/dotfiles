@@ -74,6 +74,7 @@
             enable = true;
             package = null;
           };
+          gopls.enable = true;
         };
       };
 
