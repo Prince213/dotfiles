@@ -7,7 +7,7 @@
 
     colorschemes.nightfox = {
       enable = true;
-      flavor = "dayfox";
+      flavor = "carbonfox";
     };
 
     globals = rec {
