@@ -93,6 +93,7 @@
         enable = true;
         keymaps = {
           "<Leader>ff" = "find_files";
+          "<Leader>fg" = "live_grep";
         };
       };
 
