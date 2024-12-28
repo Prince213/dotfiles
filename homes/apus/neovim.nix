@@ -34,6 +34,11 @@
         key = "<Leader>e";
         action = "<Cmd>Neotree toggle<CR>";
       }
+      {
+        mode = "n";
+        key = "<Leader>xx";
+        action = "<Cmd>Trouble diagnostics toggle<CR>";
+      }
     ];
 
     filetype = {
