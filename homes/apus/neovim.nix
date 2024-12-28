@@ -83,6 +83,7 @@
           };
           gopls.enable = true;
           nixd.enable = true;
+          texlab.enable = true;
         };
       };
 
