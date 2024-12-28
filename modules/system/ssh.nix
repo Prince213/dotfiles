@@ -5,6 +5,7 @@
     settings = {
       AuthenticationMethods = lib.mkDefault "publickey";
       KbdInteractiveAuthentication = lib.mkDefault false;
+      PasswordAuthentication = lib.mkDefault false;
     };
   };
 }
