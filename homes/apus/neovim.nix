@@ -88,7 +88,13 @@
 
       lualine.enable = true;
       neo-tree.enable = true;
-      telescope.enable = true;
+
+      telescope = {
+        enable = true;
+        keymaps = {
+          "<Leader>ff" = "find_files";
+        };
+      };
 
       treesitter =
         let
