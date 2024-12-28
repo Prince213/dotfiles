@@ -105,6 +105,8 @@
           ];
         };
 
+      trouble.enable = true;
+
       vimtex = {
         enable = true;
         texlivePackage = null;
