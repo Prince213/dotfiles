@@ -14,6 +14,7 @@
 
   home.packages = with pkgs; [
     clash-nyanpasu
+    hmcl
     wl-clipboard
     localsend
     telegram-desktop
