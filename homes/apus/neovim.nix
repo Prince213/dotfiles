@@ -26,6 +26,7 @@
       relativenumber = true;
       shiftwidth = 2;
       showtabline = 2;
+      softtabstop = -1;
     };
 
     keymaps = [
