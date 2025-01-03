@@ -15,6 +15,7 @@
   programs.tmux.enable = true;
 
   home.packages = with pkgs; [
+    awatcher
     clash-nyanpasu
     hmcl
     wl-clipboard
