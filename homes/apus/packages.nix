@@ -1,5 +1,7 @@
 { lib, pkgs, ... }:
 {
+  services.activitywatch.enable = true;
+
   programs.fastfetch.enable = true;
 
   programs.fd.enable = true;
