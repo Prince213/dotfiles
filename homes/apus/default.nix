@@ -5,6 +5,8 @@
   home = {
     username = "prince213";
     homeDirectory = "/home/${config.home.username}";
+
+    language.base = "zh_HK.UTF-8";
   };
 
   programs.home-manager.enable = true;
