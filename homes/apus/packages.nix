@@ -20,6 +20,7 @@
     hmcl
     wl-clipboard
     localsend
+    obsidian
     telegram-desktop
   ];
 
@@ -28,6 +29,7 @@
     builtins.elem (lib.getName pkg) [
       "code"
       "google-chrome"
+      "obsidian"
       "vscode"
     ];
 }
