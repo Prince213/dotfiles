@@ -22,6 +22,7 @@
     localsend
     obsidian
     telegram-desktop
+    typst
   ];
 
   nixpkgs.config.allowUnfreePredicate =
