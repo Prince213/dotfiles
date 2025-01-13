@@ -8,6 +8,8 @@
 
   programs.go.enable = true;
 
+  services.kdeconnect.enable = true;
+
   programs.nh.enable = true;
 
   programs.ripgrep.enable = true;
