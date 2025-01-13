@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   i18n = {
-    defaultLocale = "zh_HK.UTF-8";
+    defaultLocale = "zh_CN.UTF-8";
     inputMethod = {
       enable = true;
       type = "fcitx5";
