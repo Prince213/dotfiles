@@ -13,6 +13,7 @@
     ./i18n.nix
     ./networking.nix
     ./packages.nix
+    ./printing.nix
     ./secrets.nix
     ./users.nix
   ];
