@@ -22,6 +22,7 @@
     hmcl
     wl-clipboard
     localsend
+    nixfmt-rfc-style
     obsidian
     telegram-desktop
     typst
