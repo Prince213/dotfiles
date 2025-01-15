@@ -31,8 +31,8 @@ stdenv.mkDerivation rec {
     substitute ${./hook.c} hook.c \
       --replace-fail "@cups@" ${cups.lib} \
       --replace-fail "@ghostscript@" ${ghostscript} \
-      --replace-fail "@datadir@" $out/share/panasonic/printer/data \
-      --replace-fail "@out@" $out
+      --replace-fail "@datadir@" $out/share \
+      --replace-fail "@libdir@" $out/lib
     cc -shared -fPIC hook.c -o libhook.so
   '';
 
