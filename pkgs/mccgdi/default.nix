@@ -4,6 +4,7 @@
   autoPatchelfHook,
   makeWrapper,
   libgcc,
+  cups,
   ...
 }:
 
@@ -26,7 +27,9 @@ stdenv.mkDerivation rec {
   ];
 
   buildPhase = ''
-    cc -shared -fPIC ${./hook.c} -o libhook.so
+    substitute ${./hook.c} hook.c \
+      --replace-fail "@cups@" ${cups.lib}
+    cc -shared -fPIC hook.c -o libhook.so
   '';
 
   installPhase = ''
