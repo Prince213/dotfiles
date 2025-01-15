@@ -5,6 +5,7 @@
   makeWrapper,
   libgcc,
   cups,
+  ghostscript,
   ...
 }:
 
@@ -28,7 +29,8 @@ stdenv.mkDerivation rec {
 
   buildPhase = ''
     substitute ${./hook.c} hook.c \
-      --replace-fail "@cups@" ${cups.lib}
+      --replace-fail "@cups@" ${cups.lib} \
+      --replace-fail "@ghostscript@" ${ghostscript}
     cc -shared -fPIC hook.c -o libhook.so
   '';
 
