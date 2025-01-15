@@ -18,6 +18,7 @@
 
   home.packages = with pkgs; [
     awatcher
+    clang-tools
     clash-nyanpasu
     hmcl
     wl-clipboard
