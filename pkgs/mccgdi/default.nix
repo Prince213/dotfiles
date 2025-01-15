@@ -30,7 +30,8 @@ stdenv.mkDerivation rec {
   buildPhase = ''
     substitute ${./hook.c} hook.c \
       --replace-fail "@cups@" ${cups.lib} \
-      --replace-fail "@ghostscript@" ${ghostscript}
+      --replace-fail "@ghostscript@" ${ghostscript} \
+      --replace-fail "@datadir@" $out/share/panasonic/printer/data
     cc -shared -fPIC hook.c -o libhook.so
   '';
 
@@ -43,6 +44,9 @@ stdenv.mkDerivation rec {
 
     mkdir -p $out/share/cups/model/panasonic
     cp ppd/* $out/share/cups/model/panasonic/
+
+    mkdir -p $out/share/panasonic/printer/data
+    cp -r data/* $out/share/panasonic/printer/data/
   '';
 
   postFixup = ''
