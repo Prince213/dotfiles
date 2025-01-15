@@ -14,7 +14,8 @@ stdenv.mkDerivation rec {
   };
 
   installPhase = ''
-    mkdir -p $out
+    mkdir -p $out/share/cups/model/panasonic
+    cp ppd/* $out/share/cups/model/panasonic/
   '';
 
   meta = {
