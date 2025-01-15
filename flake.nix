@@ -66,14 +66,21 @@
                 sops-nix.nixosModules.sops
               ];
             };
-            apus = nixpkgs.lib.nixosSystem {
-              modules = [
-                ./systems/apus
-                ./modules/system
-                disko.nixosModules.disko
-                sops-nix.nixosModules.sops
-              ];
-            };
+            apus = withSystem "x86_64-linux" (
+              { config, ... }:
+              nixpkgs.lib.nixosSystem {
+                specialArgs = {
+                  inherit (config) packages;
+                };
+
+                modules = [
+                  ./systems/apus
+                  ./modules/system
+                  disko.nixosModules.disko
+                  sops-nix.nixosModules.sops
+                ];
+              }
+            );
           };
           homeConfigurations."prince213@apus" = withSystem "x86_64-linux" (
             { config, pkgs, ... }:
