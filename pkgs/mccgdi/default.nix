@@ -2,6 +2,7 @@
   stdenv,
   fetchzip,
   autoPatchelfHook,
+  makeWrapper,
   libgcc,
   ...
 }:
@@ -17,18 +18,31 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [
     autoPatchelfHook
+    makeWrapper
   ];
 
   buildInputs = [
     libgcc.lib
   ];
 
+  buildPhase = ''
+    cc -shared -fPIC ${./hook.c} -o libhook.so
+  '';
+
   installPhase = ''
+    mkdir -p $out/lib
+    cp libhook.so $out/lib/
+
     mkdir -p $out/lib/cups/filter
     cp filter/L_H0JDGCZAZ $out/lib/cups/filter/
 
     mkdir -p $out/share/cups/model/panasonic
     cp ppd/* $out/share/cups/model/panasonic/
+  '';
+
+  postFixup = ''
+    wrapProgram $out/lib/cups/filter/L_H0JDGCZAZ \
+      --set LD_PRELOAD $out/lib/libhook.so
   '';
 
   meta = {
