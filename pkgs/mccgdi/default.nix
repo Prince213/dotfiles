@@ -1,6 +1,8 @@
 {
   stdenv,
   fetchzip,
+  autoPatchelfHook,
+  libgcc,
   ...
 }:
 
@@ -13,7 +15,18 @@ stdenv.mkDerivation rec {
     hash = "sha256-cDXkQwzom4RmLQ9m9EegoRNRdGUUaUk3C4Qfn11V7qw=";
   };
 
+  nativeBuildInputs = [
+    autoPatchelfHook
+  ];
+
+  buildInputs = [
+    libgcc.lib
+  ];
+
   installPhase = ''
+    mkdir -p $out/lib/cups/filter
+    cp filter/L_H0JDGCZAZ $out/lib/cups/filter/
+
     mkdir -p $out/share/cups/model/panasonic
     cp ppd/* $out/share/cups/model/panasonic/
   '';
