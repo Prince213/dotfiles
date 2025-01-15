@@ -14,6 +14,10 @@ void* dlopen(const char* file, int mode) {
     file = "@cups@/lib/libcups.so";
   else if (strcmp(file, "/usr/lib/libgs.so") == 0)
     file = "@ghostscript@/lib/libgs.so";
+  else if (strcmp(file, "/usr/lib/L_H0JDJCZAZ.so") == 0)
+    file = "@out@/lib/L_H0JDJCZAZ.so";
+  else if (strcmp(file, "/usr/lib/L_H0JDJCZAZ_2.so") == 0)
+    file = "@out@/lib/L_H0JDJCZAZ_2.so";
 
   return dlopen_(file, mode);
 }

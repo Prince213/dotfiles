@@ -31,7 +31,8 @@ stdenv.mkDerivation rec {
     substitute ${./hook.c} hook.c \
       --replace-fail "@cups@" ${cups.lib} \
       --replace-fail "@ghostscript@" ${ghostscript} \
-      --replace-fail "@datadir@" $out/share/panasonic/printer/data
+      --replace-fail "@datadir@" $out/share/panasonic/printer/data \
+      --replace-fail "@out@" $out
     cc -shared -fPIC hook.c -o libhook.so
   '';
 
@@ -47,6 +48,12 @@ stdenv.mkDerivation rec {
 
     mkdir -p $out/share/panasonic/printer/data
     cp -r data/* $out/share/panasonic/printer/data/
+
+    for file in L_H0JDJCZAZ_2 L_H0JDJCZAZ; do
+      cp lib/$file.so.1.0.0 $out/lib/
+      ln -s $file.so.1.0.0 $out/lib/$file.so.1
+      ln -s $file.so.1 $out/lib/$file.so
+    done
   '';
 
   postFixup = ''
