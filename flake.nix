@@ -98,7 +98,10 @@
         perSystem =
           { pkgs, ... }:
           {
-            packages.wubi98-fonts = pkgs.callPackage ./pkgs/wubi98-fonts.nix { };
+            packages = {
+              wubi98-fonts = pkgs.callPackage ./pkgs/wubi98-fonts.nix { };
+              mccgdi = pkgs.callPackage ./pkgs/mccgdi { };
+            };
 
             devShells.default = pkgs.mkShellNoCC {
               packages = with pkgs; [
