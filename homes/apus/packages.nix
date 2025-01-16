@@ -25,6 +25,7 @@
     localsend
     nixfmt-rfc-style
     obsidian
+    scrcpy
     telegram-desktop
     typst
   ];
