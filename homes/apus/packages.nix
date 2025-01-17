@@ -16,6 +16,8 @@
 
   programs.tmux.enable = true;
 
+  programs.zoxide.enable = true;
+
   home.packages = with pkgs; [
     awatcher
     clang-tools
