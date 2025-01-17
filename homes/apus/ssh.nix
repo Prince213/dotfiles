@@ -17,6 +17,18 @@
         identityFile = config.sops.secrets.nun-ssh-root-key.path;
         identitiesOnly = true;
       };
+      epyc1 = {
+        host = "epyc1";
+        user = "geekpie";
+        identityFile = config.sops.secrets.epyc-ssh-geekpie-key.path;
+        identitiesOnly = true;
+      };
+      epyc2 = {
+        host = "epyc2";
+        user = "geekpie";
+        identityFile = config.sops.secrets.epyc-ssh-geekpie-key.path;
+        identitiesOnly = true;
+      };
       github = {
         host = "github.com";
         hostname = "ssh.github.com";
