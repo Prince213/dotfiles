@@ -29,6 +29,12 @@
         identityFile = config.sops.secrets.epyc-ssh-geekpie-key.path;
         identitiesOnly = true;
       };
+      milky-way = {
+        host = "milky-way";
+        user = "geekpie";
+        identityFile = config.sops.secrets.milky-way-ssh-geekpie-key.path;
+        identitiesOnly = true;
+      };
       github = {
         host = "github.com";
         hostname = "ssh.github.com";
