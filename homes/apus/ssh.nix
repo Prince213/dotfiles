@@ -5,6 +5,12 @@
     addKeysToAgent = "1h";
     includes = [ config.sops.secrets.ssh-config.path ];
     matchBlocks = {
+      pegasus = {
+        host = "pegasus";
+        user = "root";
+        identityFile = config.sops.secrets.pegasus-ssh-root-key.path;
+        identitiesOnly = true;
+      };
       nun = {
         host = "nun";
         user = "root";
