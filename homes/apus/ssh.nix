@@ -29,6 +29,12 @@
         identityFile = config.sops.secrets.epyc-ssh-geekpie-key.path;
         identitiesOnly = true;
       };
+      andromeda = {
+        host = "andromeda";
+        user = "geekpie";
+        identityFile = config.sops.secrets.andromeda-ssh-geekpie-key.path;
+        identitiesOnly = true;
+      };
       milky-way = {
         host = "milky-way";
         user = "geekpie";
