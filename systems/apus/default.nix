@@ -15,6 +15,7 @@
     ./packages.nix
     ./printing.nix
     ./secrets.nix
+    ./sing-box.nix
     ./users.nix
   ];
 }
