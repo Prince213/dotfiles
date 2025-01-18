@@ -3,6 +3,7 @@
   sops = {
     secrets = {
       psk-SUSTech_5G = { };
+      sing-box-outbound = { };
     };
 
     defaultSopsFile = ./secrets.yaml;
