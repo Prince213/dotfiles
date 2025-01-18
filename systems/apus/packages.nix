@@ -7,6 +7,8 @@
     merkuro = true;
   };
 
+  virtualisation.podman.enable = true;
+
   programs.steam.enable = true;
 
   services.tailscale.enable = true;
