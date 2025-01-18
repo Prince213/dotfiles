@@ -108,6 +108,7 @@
             packages = {
               wubi98-fonts = pkgs.callPackage ./pkgs/wubi98-fonts.nix { };
               mccgdi = pkgs.callPackage ./pkgs/mccgdi { };
+              sing-box = pkgs.callPackage ./pkgs/sing-box.nix { };
             };
 
             devShells.default = pkgs.mkShellNoCC {
