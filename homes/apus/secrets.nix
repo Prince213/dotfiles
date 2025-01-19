@@ -3,13 +3,13 @@
   sops = {
     secrets = {
       ssh-config = { };
-      pegasus-ssh-root-key = { };
-      nun-ssh-root-key = { };
-      epyc-ssh-geekpie-key = { };
-      andromeda-ssh-geekpie-key = { };
-      milky-way-ssh-geekpie-key = { };
-      github-ssh-git-key = { };
-      sourcehut-ssh-git-key = { };
+      ssh-key-pegasus = { };
+      ssh-key-nun = { };
+      ssh-key-epyc = { };
+      ssh-key-andromeda = { };
+      ssh-key-milky-way = { };
+      ssh-key-github = { };
+      ssh-key-sourcehut = { };
     };
 
     defaultSopsFile = ../../secrets.yaml;
