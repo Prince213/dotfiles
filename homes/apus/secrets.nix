@@ -5,6 +5,7 @@
       ssh-config = { };
       ssh-key-pegasus = { };
       ssh-key-nun = { };
+      ssh-key-corvus = { };
       ssh-key-epyc = { };
       ssh-key-andromeda = { };
       ssh-key-milky-way = { };
