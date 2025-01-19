@@ -17,6 +17,11 @@
         identityFile = config.sops.secrets.ssh-key-nun.path;
         identitiesOnly = true;
       };
+      pavo = {
+        host = "pavo";
+        identityFile = config.sops.secrets.ssh-key-pavo.path;
+        identitiesOnly = true;
+      };
       corvus = {
         host = "corvus";
         user = "root";
