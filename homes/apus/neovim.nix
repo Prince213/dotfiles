@@ -95,6 +95,7 @@
                 nixpkgs.expr = nixpkgs;
                 options = {
                   nixos.expr = "${flake}.nixosConfigurations.apus.options";
+                  home-manager.expr = "${flake}.homeConfigurations.\"prince213@apus\".options";
                 };
               };
           };
