@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, ... }:
 {
   hardware.bluetooth.enable = true;
 
@@ -7,17 +7,11 @@
     merkuro = true;
   };
 
-  virtualisation.podman.enable = true;
-
   programs.steam.enable = true;
 
   services.tailscale.enable = true;
 
   programs.zsh.enable = true;
-
-  environment.systemPackages = with pkgs; [
-    docker-client
-  ];
 
   nixpkgs.config.allowUnfreePredicate =
     pkg:

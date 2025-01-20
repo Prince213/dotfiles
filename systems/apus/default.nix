@@ -13,6 +13,7 @@
     ./i18n.nix
     ./networking.nix
     ./packages.nix
+    ./podman.nix
     ./printing.nix
     ./secrets.nix
     ./sing-box.nix
