@@ -83,7 +83,10 @@
             package = null;
           };
           gopls.enable = true;
-          nixd.enable = true;
+          nixd = {
+            enable = true;
+            package = null;
+          };
           texlab.enable = true;
         };
       };
