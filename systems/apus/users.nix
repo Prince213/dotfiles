@@ -5,6 +5,7 @@
     extraGroups = [
       "wheel"
       "podman"
+      "dialout"
     ];
     shell = pkgs.zsh;
   };
