@@ -86,6 +86,14 @@
           nixd = {
             enable = true;
             package = null;
+            settings =
+              let
+                flake = "(builtins.getFlake \"${toString ../..}\")";
+                nixpkgs = "${flake}.inputs.nixpkgs.legacyPackages.${pkgs.system}";
+              in
+              {
+                nixpkgs.expr = nixpkgs;
+              };
           };
           texlab.enable = true;
         };
