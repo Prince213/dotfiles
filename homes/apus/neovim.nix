@@ -93,6 +93,9 @@
               in
               {
                 nixpkgs.expr = nixpkgs;
+                options = {
+                  nixos.expr = "${flake}.nixosConfigurations.apus.options";
+                };
               };
           };
           texlab.enable = true;
