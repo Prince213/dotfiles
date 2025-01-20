@@ -25,6 +25,7 @@
     hmcl
     wl-clipboard
     localsend
+    nixd
     nixfmt-rfc-style
     obsidian
     scrcpy
