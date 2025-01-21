@@ -4,6 +4,9 @@
     secrets = {
       psk-ShanghaiTech-IoT = { };
       ssh-port = { };
+      root-password-hash = {
+        neededForUsers = true;
+      };
     };
 
     defaultSopsFile = ./secrets.yaml;
