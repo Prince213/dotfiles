@@ -45,6 +45,19 @@
             psk = "$PSK_SUSTech_5G";
           };
         };
+        TP-LINK_CD28 = {
+          connection = {
+            id = "TP-LINK_CD28";
+            uuid = "6117c42b-c3a4-4595-a286-2305f7d8bb02";
+            type = "wifi";
+            autoconnect = true;
+          };
+          wifi.ssid = "TP-LINK_CD28";
+          wifi-security = {
+            key-mgmt = "wpa-psk";
+            psk = "$PSK_TP_LINK_CD28";
+          };
+        };
       };
     };
   };
