@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
   boot.initrd = {
     availableKernelModules = [
@@ -17,6 +17,12 @@
           DHCP = "yes";
         };
       };
+      targets.initrd.wants = [ "wpa_supplicant@wlan0.service" ];
+      services."wpa_supplicant@".unitConfig.DefaultDependencies = false;
+    };
+
+    secrets = {
+      "/etc/wpa_supplicant/wpa_supplicant-wlan0.conf" = config.sops.secrets.wpa_supplicant.path;
     };
   };
 }

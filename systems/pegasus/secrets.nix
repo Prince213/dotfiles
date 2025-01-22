@@ -8,6 +8,7 @@
       root-password-hash = {
         neededForUsers = true;
       };
+      wpa_supplicant = { };
     };
 
     defaultSopsFile = ./secrets.yaml;
