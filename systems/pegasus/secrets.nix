@@ -9,6 +9,7 @@
         neededForUsers = true;
       };
       wpa_supplicant = { };
+      initrd-ssh-host-ed25519-key = { };
     };
 
     defaultSopsFile = ./secrets.yaml;

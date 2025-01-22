@@ -21,6 +21,13 @@
       services."wpa_supplicant@".unitConfig.DefaultDependencies = false;
     };
 
+    network.ssh = {
+      enable = true;
+      hostKeys = [
+        config.sops.secrets.initrd-ssh-host-ed25519-key.path
+      ];
+    };
+
     secrets = {
       "/etc/wpa_supplicant/wpa_supplicant-wlan0.conf" = config.sops.secrets.wpa_supplicant.path;
     };
