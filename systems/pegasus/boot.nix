@@ -10,6 +10,7 @@
       enable = true;
       packages = [ pkgs.wpa_supplicant ];
       initrdBin = [ pkgs.wpa_supplicant ];
+      users.root.shell = "/bin/systemd-tty-ask-password-agent";
       network = {
         enable = true;
         networks."10-wlan0" = {
