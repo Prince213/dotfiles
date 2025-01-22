@@ -1,22 +1,19 @@
 { lib, pkgs, ... }:
 {
-  services.activitywatch.enable = true;
+  services = {
+    activitywatch.enable = true;
+    kdeconnect.enable = true;
+  };
 
-  programs.fastfetch.enable = true;
-
-  programs.fd.enable = true;
-
-  programs.go.enable = true;
-
-  services.kdeconnect.enable = true;
-
-  programs.nh.enable = true;
-
-  programs.ripgrep.enable = true;
-
-  programs.tmux.enable = true;
-
-  programs.zoxide.enable = true;
+  programs = {
+    fastfetch.enable = true;
+    fd.enable = true;
+    go.enable = true;
+    nh.enable = true;
+    ripgrep.enable = true;
+    tmux.enable = true;
+    zoxide.enable = true;
+  };
 
   home.packages = with pkgs; [
     awatcher
