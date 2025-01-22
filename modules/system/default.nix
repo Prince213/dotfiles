@@ -5,8 +5,6 @@
     ./ssh.nix
   ];
 
-  hardware.enableRedistributableFirmware = lib.mkDefault true;
-
   boot.kernelPackages = lib.mkDefault pkgs.linuxPackages_latest;
 
   boot.loader.systemd-boot = {
