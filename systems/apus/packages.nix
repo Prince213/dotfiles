@@ -1,5 +1,7 @@
 { lib, ... }:
 {
+  hardware.enableRedistributableFirmware = true;
+
   hardware.bluetooth.enable = true;
 
   programs.kde-pim = {
