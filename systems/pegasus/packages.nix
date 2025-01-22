@@ -1,5 +1,8 @@
+{ pkgs, ... }:
 {
-  hardware.enableRedistributableFirmware = true;
+  hardware.firmware = [
+    pkgs.raspberrypiWirelessFirmware
+  ];
 
   services.tailscale.enable = true;
 }
