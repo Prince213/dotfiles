@@ -1,6 +1,6 @@
 # dotfiles
 
-# License
+## License
 
 ```
    Copyright 2024 Sizhe Zhao
