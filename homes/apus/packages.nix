@@ -18,7 +18,7 @@
   home.packages = with pkgs; [
     awatcher
     clang-tools
-    clash-nyanpasu
+    flclash
     hmcl
     wl-clipboard
     localsend
