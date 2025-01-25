@@ -6,6 +6,8 @@
 
   time.timeZone = "Asia/Shanghai";
 
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+
   imports = [
     ./boot.nix
     ./disk.nix
