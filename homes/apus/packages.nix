@@ -6,6 +6,7 @@
   };
 
   programs = {
+    btop.enable = true;
     fastfetch.enable = true;
     fd.enable = true;
     go.enable = true;
