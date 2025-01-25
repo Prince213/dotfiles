@@ -9,6 +9,8 @@
     merkuro = true;
   };
 
+  services.power-profiles-daemon.enable = false;
+
   programs.steam.enable = true;
 
   services.tailscale.enable = true;
