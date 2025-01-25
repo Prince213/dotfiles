@@ -50,6 +50,7 @@
       nixpkgs,
       flake-parts,
       disko,
+      lanzaboote,
       sops-nix,
       home-manager,
       treefmt-nix,
@@ -82,6 +83,7 @@
                   ./systems/apus
                   ./modules/system
                   disko.nixosModules.disko
+                  lanzaboote.nixosModules.lanzaboote
                   sops-nix.nixosModules.sops
                 ];
               }
