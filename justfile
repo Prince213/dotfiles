@@ -1,4 +1,4 @@
-default: update
+default: update switch
 
 update:
   nix flake update
@@ -7,3 +7,7 @@ update:
 
 push:
   git push
+
+switch:
+  nh os switch .
+  nh home switch .
