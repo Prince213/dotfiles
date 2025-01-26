@@ -2,8 +2,6 @@
 {
   home.packages = with pkgs; [
     iosevka-bin
-    noto-fonts-cjk-sans
-    noto-fonts-cjk-serif
     packages.wubi98-fonts
   ];
 

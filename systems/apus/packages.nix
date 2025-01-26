@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, pkgs, ... }:
 {
   hardware.enableRedistributableFirmware = true;
 
@@ -18,6 +18,11 @@
   services.tlp.enable = true;
 
   programs.zsh.enable = true;
+
+  fonts.packages = with pkgs; [
+    noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
+  ];
 
   nixpkgs.config.allowUnfreePredicate =
     pkg:
