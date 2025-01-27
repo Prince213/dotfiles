@@ -1,7 +1,7 @@
 { pkgs, packages, ... }:
 {
   home.packages = with pkgs; [
-    iosevka-bin
+    (iosevka-bin.override { variant = "SS08"; })
     packages.wubi98-fonts
   ];
 
