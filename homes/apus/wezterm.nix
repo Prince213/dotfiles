@@ -12,7 +12,7 @@
       config.enable_scroll_bar = true
 
       config.font = wezterm.font_with_fallback {
-        'Iosevka Term',
+        'Iosevka Term SS08',
         'Noto Sans Mono CJK SC',
       }
       config.font_size = 11.0
