@@ -6,6 +6,7 @@
       "wheel"
       "podman"
       "dialout"
+      "adbusers"
     ];
     shell = pkgs.zsh;
   };
