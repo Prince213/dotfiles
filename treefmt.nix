@@ -6,6 +6,7 @@
     "README.md"
     ".envrc"
     ".clang-format"
+    "justfile"
     "homes/apus/p10k.zsh"
   ];
 
