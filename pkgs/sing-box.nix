@@ -1,12 +1,12 @@
 { sing-box, ... }:
 
 sing-box.overrideAttrs (previousAttrs: rec {
-  version = "1.11.0-beta.23";
+  version = "1.12.0-alpha.1";
   src = previousAttrs.src.override {
     rev = "v${version}";
-    hash = "sha256-xdfptIRPiY+V41VgoUNS8Sh4QU3ahnaCgLGAqTCL8Ac=";
+    hash = "sha256-G6KcV2tpswVa6Co4/cNEwOASHY5ymAP2V8UA28Mnde4=";
   };
-  vendorHash = "sha256-NWHDEN7aQWR3DXp9nFNhxDXFMeBsCk8/ZzCcT/zgwmI=";
+  vendorHash = "sha256-0ZGPU1bYP18CLtcHDC41E2S+gTWN8Bcc1Fo6arc5RS4=";
   ldflags = [
     "-X=github.com/sagernet/sing-box/constant.Version=${version}"
   ];
