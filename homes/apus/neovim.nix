@@ -48,6 +48,10 @@
       };
     };
 
+    diagnostics = {
+      virtual_text = true;
+    };
+
     plugins = {
       cmp = {
         enable = true;
