@@ -34,6 +34,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    ghostty.url = "github:ghostty-org/ghostty";
+
     neovim-nightly = {
       url = "github:nix-community/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -55,6 +57,7 @@
       home-manager,
       treefmt-nix,
       wezterm,
+      ghostty,
       neovim-nightly,
       nixvim,
       ...
