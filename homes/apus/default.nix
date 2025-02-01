@@ -14,6 +14,7 @@
     ./direnv.nix
     ./firefox.nix
     ./fonts.nix
+    ./ghostty.nix
     ./git.nix
     ./gpg.nix
     ./neovim.nix
