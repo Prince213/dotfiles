@@ -100,6 +100,7 @@
               extraSpecialArgs = {
                 inherit (config) packages;
                 inherit wezterm;
+                inherit ghostty;
                 inherit neovim-nightly;
               };
 
