@@ -94,6 +94,7 @@
             package = null;
           };
           gopls.enable = true;
+          jsonls.enable = true;
           nixd = {
             enable = true;
             package = null;
