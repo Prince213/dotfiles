@@ -115,6 +115,7 @@
       };
 
       lualine.enable = true;
+      neoconf.enable = true;
       neo-tree.enable = true;
 
       telescope = {
