@@ -1,8 +1,8 @@
-{ pkgs, ghostty, ... }:
+{ ghostty, ... }:
 {
   programs.ghostty = {
     enable = true;
-    package = ghostty.packages.${pkgs.system}.default;
+    package = ghostty.packages.default;
     settings = {
       font-family = "Iosevka Term SS08";
       theme = "xcodedarkhc";

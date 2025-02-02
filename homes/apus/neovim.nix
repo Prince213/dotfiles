@@ -2,7 +2,7 @@
 {
   programs.nixvim = {
     enable = true;
-    package = neovim-nightly.packages.${pkgs.system}.default;
+    package = neovim-nightly.packages.default;
     defaultEditor = true;
 
     colorschemes.nightfox = {

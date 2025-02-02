@@ -56,9 +56,6 @@
       sops-nix,
       home-manager,
       treefmt-nix,
-      wezterm,
-      ghostty,
-      neovim-nightly,
       nixvim,
       ...
     }:
@@ -93,15 +90,20 @@
             );
           };
           homeConfigurations."prince213@apus" = withSystem "x86_64-linux" (
-            { config, pkgs, ... }:
+            {
+              config,
+              inputs',
+              pkgs,
+              ...
+            }:
             home-manager.lib.homeManagerConfiguration {
               inherit pkgs;
 
               extraSpecialArgs = {
                 inherit (config) packages;
-                inherit wezterm;
-                inherit ghostty;
-                inherit neovim-nightly;
+                inherit (inputs') wezterm;
+                inherit (inputs') ghostty;
+                inherit (inputs') neovim-nightly;
               };
 
               modules = [
