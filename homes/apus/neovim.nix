@@ -85,7 +85,10 @@
           };
         };
         servers = {
-          beancount.enable = true;
+          beancount = {
+            enable = true;
+            filetypes = [ "bc" ];
+          };
           clangd = {
             enable = true;
             package = null;
