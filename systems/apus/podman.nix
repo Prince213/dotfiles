@@ -5,6 +5,10 @@
     dockerSocket.enable = true;
   };
 
+  environment.systemPackages = with pkgs; [
+    docker-client
+  ];
+
   virtualisation.oci-containers.containers = {
     atrust = {
       serviceName = "atrust";
@@ -27,8 +31,4 @@
       ];
     };
   };
-
-  environment.systemPackages = with pkgs; [
-    docker-client
-  ];
 }
