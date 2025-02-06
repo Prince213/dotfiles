@@ -29,11 +29,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    wezterm = {
-      url = "github:wez/wezterm?dir=nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     ghostty.url = "github:ghostty-org/ghostty";
 
     neovim-nightly = {
@@ -101,7 +96,6 @@
 
               extraSpecialArgs = {
                 inherit (config) packages;
-                inherit (inputs') wezterm;
                 inherit (inputs') ghostty;
                 inherit (inputs') neovim-nightly;
               };
