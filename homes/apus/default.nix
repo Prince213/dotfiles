@@ -23,7 +23,6 @@
     ./secrets.nix
     ./ssh.nix
     ./vscode.nix
-    ./wezterm.nix
     ./zsh.nix
   ];
 }
