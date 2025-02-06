@@ -71,7 +71,13 @@
         };
       };
 
-      gitsigns.enable = true;
+      gitsigns = {
+        enable = true;
+        settings = {
+          current_line_blame = true;
+        };
+      };
+
       image.enable = true;
       indent-blankline.enable = true;
       leap.enable = true;
