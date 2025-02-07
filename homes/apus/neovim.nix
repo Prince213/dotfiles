@@ -124,6 +124,7 @@
       lualine.enable = true;
       neoconf.enable = true;
       neo-tree.enable = true;
+      notify.enable = true;
 
       telescope = {
         enable = true;
