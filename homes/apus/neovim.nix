@@ -153,6 +153,7 @@
             markdown_inline
             nix
             query
+            regex
             vim
             vimdoc
           ];
