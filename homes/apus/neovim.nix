@@ -143,6 +143,7 @@
           enable = true;
           inherit package;
           grammarPackages = with package.builtGrammars; [
+            bash
             beancount
             c
             jsonc
