@@ -145,6 +145,7 @@
           grammarPackages = with package.builtGrammars; [
             beancount
             c
+            jsonc
             latex
             lua
             markdown
