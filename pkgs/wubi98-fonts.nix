@@ -1,4 +1,5 @@
 {
+  lib,
   stdenvNoCC,
   fetchFromGitHub,
   p7zip,
@@ -27,4 +28,10 @@ stdenvNoCC.mkDerivation {
   installPhase = ''
     install -Dm 444 -t $out/share/fonts/opentype/wubi98-fonts fcitx5-rime/fonts/98WB-[0123UV].otf
   '';
+
+  meta = {
+    description = "Fonts for wubi98";
+    license = lib.licenses.unlicense;
+    platforms = lib.platforms.all;
+  };
 }
