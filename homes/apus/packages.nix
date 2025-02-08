@@ -1,7 +1,10 @@
 { lib, pkgs, ... }:
 {
   services = {
-    activitywatch.enable = true;
+    activitywatch = {
+      enable = true;
+      package = pkgs.aw-server-rust;
+    };
     kdeconnect.enable = true;
   };
 
