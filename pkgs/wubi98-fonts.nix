@@ -11,9 +11,9 @@ stdenvNoCC.mkDerivation {
 
   src = fetchFromGitHub {
     owner = "yanhuacuo";
-    repo = "98wubi";
-    rev = "3b2f2769cf39f9253fd0e6594e85ae3f7f5c72d0";
-    hash = "sha256-Qtw38bMxG/DBisuYuEccBTmyUFBguaiRAxsHAjGbEDw=";
+    repo = "fcitx5-wubi98";
+    rev = "1001410331a731f39b32bc8786d8a22e9f0b68ab";
+    hash = "sha256-leJlhmt/oFDrdMTGscbb7CMpWORyCZ221xSpxm4ydHU=";
   };
 
   nativeBuildInputs = [
@@ -21,10 +21,10 @@ stdenvNoCC.mkDerivation {
   ];
 
   buildPhase = ''
-    7z e fonts/字体支持更新-20240131.7z.001
+    7z x fcitx5-rime.7z.001
   '';
 
   installPhase = ''
-    install -Dt $out/share/fonts/opentype/wubi98-fonts 98WB-{0,1,2,3,U,V}.otf
+    install -Dt $out/share/fonts/opentype/wubi98-fonts fcitx5-rime/fonts/98WB-{0,1,2,3,U,V}.otf
   '';
 }
