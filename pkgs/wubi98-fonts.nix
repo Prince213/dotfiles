@@ -25,6 +25,6 @@ stdenvNoCC.mkDerivation {
   '';
 
   installPhase = ''
-    install -Dt $out/share/fonts/opentype/wubi98-fonts fcitx5-rime/fonts/98WB-{0,1,2,3,U,V}.otf
+    install -Dm 444 -t $out/share/fonts/opentype/wubi98-fonts fcitx5-rime/fonts/98WB-{0,1,2,3,U,V}.otf
   '';
 }
