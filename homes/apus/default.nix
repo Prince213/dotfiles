@@ -10,6 +10,7 @@
   programs.home-manager.enable = true;
 
   imports = [
+    ./activitywatch.nix
     ./chrome.nix
     ./direnv.nix
     ./firefox.nix
