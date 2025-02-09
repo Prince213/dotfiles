@@ -1,6 +1,7 @@
 { sing-box, ... }:
 
 sing-box.overrideAttrs (previousAttrs: rec {
+  pname = "sing-box-beta";
   version = "1.12.0-alpha.2";
   src = previousAttrs.src.override {
     rev = "v${version}";

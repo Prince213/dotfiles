@@ -112,7 +112,7 @@
           overlays.default = self: super: {
             wubi98-fonts = self.callPackage ./pkgs/wubi98-fonts.nix { };
             mccgdi = self.callPackage ./pkgs/mccgdi { };
-            sing-box = self.callPackage ./pkgs/sing-box.nix { };
+            sing-box-beta = self.callPackage ./pkgs/sing-box-beta.nix { };
           };
         };
         systems = [ "x86_64-linux" ];
@@ -127,7 +127,7 @@
             packages = {
               inherit (pkgs) wubi98-fonts;
               inherit (pkgs) mccgdi;
-              inherit (pkgs) sing-box;
+              inherit (pkgs) sing-box-beta;
             };
 
             devShells.default = pkgs.mkShellNoCC {
