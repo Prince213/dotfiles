@@ -44,6 +44,7 @@
 
   outputs =
     inputs@{
+      self,
       nixpkgs,
       flake-parts,
       disko,
@@ -115,12 +116,17 @@
         };
         systems = [ "x86_64-linux" ];
         perSystem =
-          { pkgs, ... }:
+          { system, pkgs, ... }:
           {
+            _module.args.pkgs = import nixpkgs {
+              inherit system;
+              overlays = [ self.overlays.default ];
+            };
+
             packages = {
-              wubi98-fonts = pkgs.callPackage ./pkgs/wubi98-fonts.nix { };
-              mccgdi = pkgs.callPackage ./pkgs/mccgdi { };
-              sing-box = pkgs.callPackage ./pkgs/sing-box.nix { };
+              inherit (pkgs) wubi98-fonts;
+              inherit (pkgs) mccgdi;
+              inherit (pkgs) sing-box;
             };
 
             devShells.default = pkgs.mkShellNoCC {
