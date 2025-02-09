@@ -106,13 +106,15 @@
             package = null;
             settings =
               let
-                flake = "(builtins.getFlake \"${toString ../..}\")";
+                self = "(builtins.getFlake \"${toString ../..}\")";
+                system = "${self}.nixosConfigurations.apus";
+                home = "${self}.homeConfigurations.\"prince213@apus\"";
               in
               {
-                nixpkgs.expr = "${flake}.nixosConfigurations.apus._module.args.pkgs";
+                nixpkgs.expr = "${system}._module.args.pkgs";
                 options = {
-                  nixos.expr = "${flake}.nixosConfigurations.apus.options";
-                  home-manager.expr = "${flake}.homeConfigurations.\"prince213@apus\".options";
+                  nixos.expr = "${system}.options";
+                  home-manager.expr = "${home}.options";
                 };
               };
           };
