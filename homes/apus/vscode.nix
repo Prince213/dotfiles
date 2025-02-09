@@ -1,9 +1,17 @@
-{ pkgs, ... }:
+{ vscode-extensions, pkgs, ... }:
 {
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
     mutableExtensionsDir = false;
+    extensions =
+      let
+        extensions = vscode-extensions.extensions.${pkgs.system};
+      in
+      with extensions.open-vsx;
+      [
+        jnoortheen.nix-ide
+      ];
     userSettings = {
       "editor.fontFamily" = "Iosevka SS08";
       "editor.fontLigatures" = true;

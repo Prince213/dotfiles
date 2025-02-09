@@ -92,6 +92,7 @@
               extraSpecialArgs = {
                 inherit (inputs') ghostty;
                 inherit (inputs') neovim-nightly;
+                inherit (inputs) vscode-extensions;
               };
 
               modules = [
