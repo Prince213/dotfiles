@@ -10,6 +10,7 @@
       in
       with extensions.open-vsx;
       [
+        activitywatch.aw-watcher-vscode
         jnoortheen.nix-ide
       ];
     userSettings = {
