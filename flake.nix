@@ -80,17 +80,11 @@
             };
           };
           homeConfigurations."prince213@apus" = withSystem "x86_64-linux" (
-            {
-              config,
-              inputs',
-              pkgs,
-              ...
-            }:
+            { inputs', pkgs, ... }:
             home-manager.lib.homeManagerConfiguration {
               inherit pkgs;
 
               extraSpecialArgs = {
-                inherit (config) packages;
                 inherit (inputs') ghostty;
                 inherit (inputs') neovim-nightly;
               };
