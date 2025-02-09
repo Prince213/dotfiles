@@ -24,6 +24,10 @@
     noto-fonts-cjk-serif
   ];
 
+  environment.plasma6.excludePackages = with pkgs.kdePackages; [
+    khelpcenter
+  ];
+
   nixpkgs.config.allowUnfreePredicate =
     pkg:
     builtins.elem (lib.getName pkg) [
