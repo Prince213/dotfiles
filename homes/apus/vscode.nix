@@ -18,6 +18,8 @@
       "editor.rulers" = [ 80 ];
       "window.commandCenter" = false;
       "window.titleBarStyle" = "custom";
+
+      "nix.enableLanguageServer" = true;
     };
   };
 }
