@@ -1,9 +1,9 @@
-{ packages, ... }:
+{ pkgs, ... }:
 {
   services.printing = {
     enable = true;
     drivers = [
-      packages.mccgdi
+      pkgs.mccgdi
     ];
   };
 }

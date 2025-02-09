@@ -78,6 +78,7 @@
                 modules = [
                   ./systems/apus
                   ./modules/system
+                  { nixpkgs.overlays = [ self.overlays.default ]; }
                   disko.nixosModules.disko
                   lanzaboote.nixosModules.lanzaboote
                   sops-nix.nixosModules.sops

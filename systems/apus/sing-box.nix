@@ -1,8 +1,8 @@
-{ config, packages, ... }:
+{ config, pkgs, ... }:
 {
   services.sing-box = {
     enable = true;
-    package = packages.sing-box;
+    package = pkgs.sing-box;
     settings = {
       log = {
         level = "info";
