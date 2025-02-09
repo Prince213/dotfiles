@@ -1,4 +1,5 @@
 {
+  lib,
   stdenv,
   fetchzip,
   autoPatchelfHook,
@@ -65,6 +66,7 @@ stdenv.mkDerivation rec {
     description = "Panasonic multi-function station printer drivers";
     homepage = "https://docs.connect.panasonic.com/pcc/support/fax/";
     downloadPage = "https://docs.connect.panasonic.com/pcc/support/fax/common/table/linuxdriver.html";
+    license = lib.licenses.unfree;
     platforms = [ "x86_64-linux" ];
   };
 }
