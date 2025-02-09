@@ -24,7 +24,6 @@
     localsend
     nixd
     nixfmt-rfc-style
-    obsidian
     scrcpy
     telegram-desktop
     typst
@@ -35,7 +34,6 @@
     builtins.elem (lib.getName pkg) [
       "code"
       "google-chrome"
-      "obsidian"
       "vscode"
     ];
 }
