@@ -13,6 +13,7 @@
     ./disk.nix
     ./graphics.nix
     ./i18n.nix
+    ./keyd.nix
     ./networking.nix
     ./packages.nix
     ./podman.nix
