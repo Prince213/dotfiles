@@ -107,6 +107,11 @@
               ];
             }
           );
+          overlays.default = self: super: {
+            wubi98-fonts = self.callPackage ./pkgs/wubi98-fonts.nix { };
+            mccgdi = self.callPackage ./pkgs/mccgdi { };
+            sing-box = self.callPackage ./pkgs/sing-box.nix { };
+          };
         };
         systems = [ "x86_64-linux" ];
         perSystem =
