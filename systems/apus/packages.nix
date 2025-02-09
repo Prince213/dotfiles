@@ -27,6 +27,7 @@
   nixpkgs.config.allowUnfreePredicate =
     pkg:
     builtins.elem (lib.getName pkg) [
+      "mccgdi"
       "steam"
       "steam-unwrapped"
     ];
