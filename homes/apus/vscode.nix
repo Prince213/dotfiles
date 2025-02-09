@@ -20,6 +20,7 @@
       "window.titleBarStyle" = "custom";
 
       "nix.enableLanguageServer" = true;
+      "nix.serverPath" = "nixd";
     };
   };
 }
