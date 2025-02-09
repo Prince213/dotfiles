@@ -16,6 +16,7 @@
     };
 
     opts = {
+      colorcolumn = [ 80 ];
       expandtab = true;
       listchars = {
         space = "·";
