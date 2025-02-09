@@ -107,10 +107,9 @@
             settings =
               let
                 flake = "(builtins.getFlake \"${toString ../..}\")";
-                nixpkgs = "${flake}.inputs.nixpkgs.legacyPackages.${pkgs.system}";
               in
               {
-                nixpkgs.expr = nixpkgs;
+                nixpkgs.expr = "${flake}.nixosConfigurations.apus._module.args.pkgs";
                 options = {
                   nixos.expr = "${flake}.nixosConfigurations.apus.options";
                   home-manager.expr = "${flake}.homeConfigurations.\"prince213@apus\".options";
