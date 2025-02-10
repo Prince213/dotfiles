@@ -1,6 +1,14 @@
 {
   programs.plasma = {
     enable = true;
+    configFile = {
+      kdeglobals = {
+        General = {
+          TerminalApplication = "ghostty";
+          TerminalService = "com.mitchellh.ghostty.desktop";
+        };
+      };
+    };
   };
 
   xdg.mimeApps = {
