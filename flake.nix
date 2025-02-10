@@ -88,6 +88,7 @@
                   {
                     home-manager = {
                       useGlobalPkgs = true;
+                      useUserPackages = true;
                       extraSpecialArgs = {
                         inherit (inputs') ghostty;
                         inherit (inputs') neovim-nightly;
