@@ -73,35 +73,38 @@
                 sops-nix.nixosModules.sops
               ];
             };
-            apus = nixpkgs.lib.nixosSystem {
-              modules = [
-                ./systems/apus
-                ./modules/system
-                { nixpkgs.overlays = [ self.overlays.default ]; }
-                disko.nixosModules.disko
-                lanzaboote.nixosModules.lanzaboote
-                sops-nix.nixosModules.sops
-              ];
-            };
+            apus = withSystem "x86_64-linux" (
+              { inputs', ... }:
+              nixpkgs.lib.nixosSystem {
+                modules = [
+                  ./systems/apus
+                  ./modules/system
+                  { nixpkgs.overlays = [ self.overlays.default ]; }
+                  disko.nixosModules.disko
+                  lanzaboote.nixosModules.lanzaboote
+                  sops-nix.nixosModules.sops
+
+                  home-manager.nixosModules.home-manager
+                  {
+                    home-manager = {
+                      extraSpecialArgs = {
+                        inherit (inputs') ghostty;
+                        inherit (inputs') neovim-nightly;
+                        inherit (inputs) vscode-extensions;
+                      };
+                      users.prince213 = {
+                        imports = [
+                          ./homes/apus
+                          sops-nix.homeManagerModule
+                          nixvim.homeManagerModules.nixvim
+                        ];
+                      };
+                    };
+                  }
+                ];
+              }
+            );
           };
-          homeConfigurations."prince213@apus" = withSystem "x86_64-linux" (
-            { inputs', pkgs, ... }:
-            home-manager.lib.homeManagerConfiguration {
-              inherit pkgs;
-
-              extraSpecialArgs = {
-                inherit (inputs') ghostty;
-                inherit (inputs') neovim-nightly;
-                inherit (inputs) vscode-extensions;
-              };
-
-              modules = [
-                ./homes/apus
-                sops-nix.homeManagerModule
-                nixvim.homeManagerModules.nixvim
-              ];
-            }
-          );
           overlays.default = self: super: {
             wubi98-fonts = self.callPackage ./pkgs/wubi98-fonts.nix { };
             mccgdi = self.callPackage ./pkgs/mccgdi { };
