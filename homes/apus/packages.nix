@@ -28,11 +28,4 @@
     telegram-desktop
     typst
   ];
-
-  nixpkgs.config.allowUnfreePredicate =
-    pkg:
-    builtins.elem (lib.getName pkg) [
-      "code"
-      "vscode"
-    ];
 }
