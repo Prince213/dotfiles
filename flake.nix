@@ -64,6 +64,7 @@
       lanzaboote,
       sops-nix,
       home-manager,
+      plasma-manager,
       treefmt-nix,
       nixvim,
       ...
@@ -107,6 +108,7 @@
                           ./homes/apus
                           sops-nix.homeManagerModule
                           nixvim.homeManagerModules.nixvim
+                          plasma-manager.homeManagerModules.plasma-manager
                         ];
                       };
                     };
