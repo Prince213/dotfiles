@@ -8,6 +8,14 @@
           TerminalService = "com.mitchellh.ghostty.desktop";
         };
       };
+      kwinrc = {
+        Wayland = {
+          InputMethod = {
+            value = "/run/current-system/sw/share/applications/fcitx5-wayland-launcher.desktop";
+            shellExpand = true;
+          };
+        };
+      };
     };
     input = {
       mice = [
