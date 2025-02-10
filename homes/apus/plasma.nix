@@ -9,6 +9,16 @@
         };
       };
     };
+    input = {
+      mice = [
+        {
+          vendorId = "046d";
+          productId = "c548";
+          name = "Logitech USB Receiver Mouse";
+          naturalScroll = true;
+        }
+      ];
+    };
   };
 
   xdg.mimeApps = {
