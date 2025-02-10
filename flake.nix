@@ -103,12 +103,14 @@
                         inherit (inputs') neovim-nightly;
                         inherit (inputs) vscode-extensions;
                       };
+                      sharedModules = [
+                        sops-nix.homeManagerModule
+                        nixvim.homeManagerModules.nixvim
+                        plasma-manager.homeManagerModules.plasma-manager
+                      ];
                       users.prince213 = {
                         imports = [
                           ./homes/apus
-                          sops-nix.homeManagerModule
-                          nixvim.homeManagerModules.nixvim
-                          plasma-manager.homeManagerModules.plasma-manager
                         ];
                       };
                     };
