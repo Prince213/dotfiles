@@ -10,4 +10,3 @@ push:
 
 switch:
   nh os switch .
-  nh home switch .
