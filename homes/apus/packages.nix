@@ -12,7 +12,6 @@
     navi.enable = true;
     nh.enable = true;
     ripgrep.enable = true;
-    tmux.enable = true;
     zoxide.enable = true;
   };
 

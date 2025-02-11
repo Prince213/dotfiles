@@ -16,6 +16,7 @@
     ./packages.nix
     ./secrets.nix
     ./ssh.nix
+    ./tmux.nix
     ./vscode.nix
     ./zsh.nix
   ];
