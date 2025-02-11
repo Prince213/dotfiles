@@ -4,6 +4,7 @@
   imports = [
     ./activitywatch.nix
     ./chrome.nix
+    ./desktop.nix
     ./direnv.nix
     ./firefox.nix
     ./fonts.nix
@@ -13,7 +14,6 @@
     ./neovim.nix
     ./nix.nix
     ./packages.nix
-    ./plasma.nix
     ./secrets.nix
     ./ssh.nix
     ./vscode.nix
