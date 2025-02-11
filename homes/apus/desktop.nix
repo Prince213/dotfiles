@@ -16,6 +16,11 @@
           };
         };
       };
+      dolphinrc = {
+        DetailsMode = {
+          PreviewSize = 22;
+        };
+      };
     };
     input = {
       mice = [
