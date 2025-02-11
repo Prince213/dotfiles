@@ -10,8 +10,8 @@
 
   imports = [
     ./boot.nix
+    ./desktop.nix
     ./disk.nix
-    ./graphics.nix
     ./i18n.nix
     ./keyd.nix
     ./networking.nix
