@@ -9,6 +9,7 @@
     fastfetch.enable = true;
     fd.enable = true;
     go.enable = true;
+    navi.enable = true;
     nh.enable = true;
     ripgrep.enable = true;
     tmux.enable = true;
