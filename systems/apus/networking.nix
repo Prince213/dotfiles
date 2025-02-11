@@ -60,6 +60,19 @@
             psk = "$PSK_TP_LINK_CD28";
           };
         };
+        Tenda_E78700_5G = {
+          connection = {
+            id = "Tenda_E78700_5G";
+            uuid = "0ab2d4e4-f7f8-4479-bd17-e6f3eb1d3391";
+            type = "wifi";
+            autoconnect = true;
+          };
+          wifi.ssid = "Tenda_E78700_5G";
+          wifi-security = {
+            key-mgmt = "wpa-psk";
+            psk = "$PSK_Tenda_E78700_5G";
+          };
+        };
       };
     };
   };
