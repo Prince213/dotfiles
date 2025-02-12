@@ -8,9 +8,11 @@
       let
         extensions = vscode-extensions.extensions.${pkgs.system};
       in
+      with extensions.vscode-marketplace;
       with extensions.open-vsx;
       [
         activitywatch.aw-watcher-vscode
+        yanivmo.navi-cheatsheet-language
         jnoortheen.nix-ide
       ];
     userSettings = {
