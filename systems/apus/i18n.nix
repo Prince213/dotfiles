@@ -10,6 +10,15 @@
         addons = with pkgs; [
           fcitx5-rime
         ];
+        settings = {
+          addons = {
+            classicui = {
+              globalSection = {
+                "Vertical Candidate List" = "True";
+              };
+            };
+          };
+        };
       };
     };
   };
