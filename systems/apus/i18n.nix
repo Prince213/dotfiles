@@ -11,6 +11,11 @@
           fcitx5-rime
         ];
         settings = {
+          globalOptions = {
+            "Hotkey/TriggerKeys" = {
+              "0" = "Control+Shift+Shift_L";
+            };
+          };
           addons = {
             classicui = {
               globalSection = {
