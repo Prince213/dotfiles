@@ -77,7 +77,7 @@
             pegasus = nixpkgs.lib.nixosSystem {
               modules = [
                 ./systems/pegasus
-                ./modules/system
+                ./common/system
                 disko.nixosModules.disko
                 sops-nix.nixosModules.sops
               ];
@@ -87,7 +87,7 @@
               nixpkgs.lib.nixosSystem {
                 modules = [
                   ./systems/apus
-                  ./modules/system
+                  ./common/system
                   { nixpkgs.overlays = [ self.overlays.default ]; }
                   disko.nixosModules.disko
                   lanzaboote.nixosModules.lanzaboote
