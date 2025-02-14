@@ -4,11 +4,6 @@
 
   hardware.bluetooth.enable = true;
 
-  programs.kde-pim = {
-    enable = true;
-    merkuro = true;
-  };
-
   services.power-profiles-daemon.enable = false;
 
   programs.steam.enable = true;
