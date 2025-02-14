@@ -5,6 +5,7 @@
       psk-SUSTech_5G = { };
       psk-TP-LINK_CD28 = { };
       psk-Tenda_E78700_5G = { };
+      dae = { };
     };
 
     defaultSopsFile = ./secrets.yaml;
