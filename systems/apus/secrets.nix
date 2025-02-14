@@ -5,7 +5,6 @@
       psk-SUSTech_5G = { };
       psk-TP-LINK_CD28 = { };
       psk-Tenda_E78700_5G = { };
-      sing-box-outbound = { };
     };
 
     defaultSopsFile = ./secrets.yaml;
