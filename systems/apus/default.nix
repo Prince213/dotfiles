@@ -10,6 +10,7 @@
 
   imports = [
     ./boot.nix
+    ./dae.nix
     ./desktop.nix
     ./disk.nix
     ./i18n.nix
