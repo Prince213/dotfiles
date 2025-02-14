@@ -19,7 +19,6 @@
     ./podman.nix
     ./printing.nix
     ./secrets.nix
-    ./sing-box.nix
     ./ssh.nix
     ./users.nix
   ];
