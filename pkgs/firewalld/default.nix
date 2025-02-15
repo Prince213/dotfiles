@@ -2,6 +2,7 @@
   stdenv,
   fetchFromGitHub,
   autoreconfHook,
+  python3,
   ...
 }:
 
@@ -18,5 +19,6 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [
     autoreconfHook
+    python3
   ];
 }
