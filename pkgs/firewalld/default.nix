@@ -7,6 +7,7 @@
   libxslt,
   glib,
   pkg-config,
+  docbook-xsl-nons,
   ...
 }:
 
@@ -28,5 +29,9 @@ stdenv.mkDerivation rec {
     libxslt
     glib
     pkg-config
+  ];
+
+  buildInputs = [
+    docbook-xsl-nons
   ];
 }
