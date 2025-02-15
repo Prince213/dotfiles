@@ -5,6 +5,7 @@
   python3,
   libxslt,
   glib,
+  pkg-config,
   ...
 }:
 
@@ -24,5 +25,6 @@ stdenv.mkDerivation rec {
     python3
     libxslt
     glib
+    pkg-config
   ];
 }
