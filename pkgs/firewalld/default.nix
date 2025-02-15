@@ -11,6 +11,7 @@
   libsForQt5,
   libxml2,
   libxslt,
+  networkmanager,
   glib,
   gobject-introspection,
   pkg-config,
@@ -74,6 +75,7 @@ stdenv.mkDerivation rec {
     docbook-xsl-nons
     docbook_xml_dtd_42
     libnotify
+    networkmanager
   ];
 
   dontWrapGApps = true;
