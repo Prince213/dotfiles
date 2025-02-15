@@ -125,6 +125,7 @@
             mccgdi = self.callPackage ./pkgs/mccgdi { };
             sing-box-beta = self.callPackage ./pkgs/sing-box-beta.nix { };
           };
+          nixosModules.default = ./modules/system;
         };
         systems = [ "x86_64-linux" ];
         perSystem =
