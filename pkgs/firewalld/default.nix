@@ -23,6 +23,7 @@ let
       dbus-python
       nftables
       pygobject3
+      pyqt5
     ]
   );
 in
