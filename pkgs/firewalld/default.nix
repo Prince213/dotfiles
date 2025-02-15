@@ -41,6 +41,11 @@ stdenv.mkDerivation rec {
     ./respect-xml-catalog-files-var.patch
   ];
 
+  postPatch = ''
+    substituteInPlace src/firewall/config/__init__.py.in \
+      --replace-fail /usr "$out"
+  '';
+
   nativeBuildInputs = [
     autoreconfHook
     wrapGAppsHook3
