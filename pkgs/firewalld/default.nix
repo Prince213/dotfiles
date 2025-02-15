@@ -47,6 +47,11 @@ stdenv.mkDerivation rec {
   postPatch = ''
     substituteInPlace src/firewall/config/__init__.py.in \
       --replace-fail /usr "$out"
+
+    for file in config/firewall-{applet,config}.desktop.in; do
+      substituteInPlace $file \
+        --replace-fail /usr "$out"
+    done
   '';
 
   nativeBuildInputs = [
