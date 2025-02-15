@@ -38,7 +38,7 @@ in
 
       serviceConfig = {
         EnvironmentFile = [ "-/etc/sysconfig/firewalld" ];
-        ExecStart = "${cfg.package}/sbin/firewalld --nofork --nopid $FIREWALLD_ARGS";
+        ExecStart = "${cfg.package}/bin/firewalld --nofork --nopid $FIREWALLD_ARGS";
         ExecReload = "${pkgs.coreutils}/bin/kill -HUP $MAINPID";
         StandardOutput = "null";
         StandardError = "null";
