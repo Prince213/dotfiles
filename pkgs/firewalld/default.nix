@@ -7,6 +7,7 @@
   intltool,
   ipset,
   iptables,
+  libnotify,
   libxml2,
   libxslt,
   glib,
@@ -65,6 +66,7 @@ stdenv.mkDerivation rec {
   buildInputs = [
     docbook-xsl-nons
     docbook_xml_dtd_42
+    libnotify
   ];
 
   dontWrapGApps = true;
