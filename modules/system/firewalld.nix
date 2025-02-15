@@ -7,15 +7,29 @@
 
 let
   cfg = config.services.firewalld;
+  settingsFormat = pkgs.formats.keyValue { };
 in
 {
   options.services.firewalld = {
     enable = lib.mkEnableOption "FirewallD";
     package = lib.mkPackageOption pkgs "firewalld" { };
+    settings = lib.mkOption {
+      description = ''
+        firewalld config file. See {manpage}`firewalld.conf(5)`.
+      '';
+      default = { };
+      type = lib.types.submodule {
+        freeformType = settingsFormat.type;
+      };
+    };
   };
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = [ cfg.package ];
+
+    environment.etc."firewalld/firewalld.conf" = {
+      source = settingsFormat.generate "firewalld.conf" cfg.settings;
+    };
 
     systemd.services.firewalld = {
       description = "firewalld - dynamic firewall daemon";
