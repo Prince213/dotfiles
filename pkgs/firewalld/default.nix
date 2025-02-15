@@ -3,6 +3,7 @@
   fetchFromGitHub,
   autoreconfHook,
   python3,
+  libxml2,
   libxslt,
   glib,
   pkg-config,
@@ -23,6 +24,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     autoreconfHook
     python3
+    libxml2
     libxslt
     glib
     pkg-config
