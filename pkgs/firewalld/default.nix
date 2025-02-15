@@ -3,6 +3,7 @@
   fetchFromGitHub,
   autoreconfHook,
   python3,
+  libxslt,
   ...
 }:
 
@@ -20,5 +21,6 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     autoreconfHook
     python3
+    libxslt
   ];
 }
