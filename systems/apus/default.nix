@@ -13,6 +13,7 @@
     ./dae.nix
     ./desktop.nix
     ./disk.nix
+    ./firewall.nix
     ./i18n.nix
     ./keyd.nix
     ./networking.nix
