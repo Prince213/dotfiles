@@ -2,6 +2,7 @@
   stdenv,
   fetchFromGitHub,
   autoreconfHook,
+  wrapGAppsHook3,
   python3,
   intltool,
   ipset,
@@ -41,6 +42,7 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [
     autoreconfHook
+    wrapGAppsHook3
     python3'
     python3'.pkgs.wrapPython
     intltool
@@ -57,6 +59,12 @@ stdenv.mkDerivation rec {
     docbook-xsl-nons
     docbook_xml_dtd_42
   ];
+
+  dontWrapGApps = true;
+
+  preFixup = ''
+    makeWrapperArgs+=("''${gappsWrapperArgs[@]}")
+  '';
 
   postFixup = ''
     wrapPythonPrograms
