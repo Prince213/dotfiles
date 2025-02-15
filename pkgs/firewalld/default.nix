@@ -1,4 +1,9 @@
-{ stdenv, fetchFromGitHub, ... }:
+{
+  stdenv,
+  fetchFromGitHub,
+  autoreconfHook,
+  ...
+}:
 
 stdenv.mkDerivation rec {
   pname = "firewalld";
@@ -10,4 +15,8 @@ stdenv.mkDerivation rec {
     rev = "v${version}";
     hash = "sha256-ubE1zMIOcdg2+mgXsk6brCZxS1XkvJYwVY3E+UXIIiU=";
   };
+
+  nativeBuildInputs = [
+    autoreconfHook
+  ];
 }
