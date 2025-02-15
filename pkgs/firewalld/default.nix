@@ -40,6 +40,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     autoreconfHook
     python3'
+    python3'.pkgs.wrapPython
     intltool
     ipset
     iptables
@@ -53,4 +54,8 @@ stdenv.mkDerivation rec {
     docbook-xsl-nons
     docbook_xml_dtd_42
   ];
+
+  postFixup = ''
+    wrapPythonPrograms
+  '';
 }
