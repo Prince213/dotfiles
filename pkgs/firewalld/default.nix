@@ -3,6 +3,7 @@
   fetchFromGitHub,
   autoreconfHook,
   python3,
+  ipset,
   iptables,
   libxml2,
   libxslt,
@@ -30,6 +31,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     autoreconfHook
     python3
+    ipset
     iptables
     libxml2
     libxslt
