@@ -9,6 +9,7 @@
   intltool,
   ipset,
   iptables,
+  kdePackages,
   libnotify,
   libsForQt5,
   libxml2,
@@ -53,6 +54,9 @@ stdenv.mkDerivation rec {
       substituteInPlace $file \
         --replace-fail /usr "$out"
     done
+
+    substituteInPlace src/firewall-applet.in \
+      --replace-fail /usr "${kdePackages.systemsettings}"
   '';
 
   nativeBuildInputs = [
