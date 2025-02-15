@@ -9,6 +9,7 @@
   libxml2,
   libxslt,
   glib,
+  gobject-introspection,
   pkg-config,
   docbook-xsl-nons,
   docbook_xml_dtd_42,
@@ -48,6 +49,7 @@ stdenv.mkDerivation rec {
     libxml2
     libxslt
     glib
+    gobject-introspection
     pkg-config
   ];
 
