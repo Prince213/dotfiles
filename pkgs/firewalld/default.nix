@@ -15,6 +15,13 @@
   ...
 }:
 
+let
+  python3' = python3.withPackages (
+    ps: with ps; [
+      dbus-python
+    ]
+  );
+in
 stdenv.mkDerivation rec {
   pname = "firewalld";
   version = "2.3.0";
@@ -32,7 +39,7 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [
     autoreconfHook
-    python3
+    python3'
     intltool
     ipset
     iptables
