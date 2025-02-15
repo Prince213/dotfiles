@@ -8,6 +8,7 @@
   ipset,
   iptables,
   libnotify,
+  libsForQt5,
   libxml2,
   libxslt,
   glib,
@@ -51,6 +52,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     autoreconfHook
     wrapGAppsHook3
+    libsForQt5.wrapQtAppsHook
     python3'
     python3'.pkgs.wrapPython
     intltool
@@ -70,9 +72,11 @@ stdenv.mkDerivation rec {
   ];
 
   dontWrapGApps = true;
+  dontWrapQtApps = true;
 
   preFixup = ''
     makeWrapperArgs+=("''${gappsWrapperArgs[@]}")
+    makeWrapperArgs+=("''${qtWrapperArgs[@]}")
   '';
 
   postFixup = ''
