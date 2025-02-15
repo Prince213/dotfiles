@@ -2,8 +2,10 @@
   stdenv,
   fetchFromGitHub,
   autoreconfHook,
-  wrapGAppsHook3,
-  python3,
+  docbook_xml_dtd_42,
+  docbook-xsl-nons,
+  glib,
+  gobject-introspection,
   intltool,
   ipset,
   iptables,
@@ -12,11 +14,9 @@
   libxml2,
   libxslt,
   networkmanager,
-  glib,
-  gobject-introspection,
   pkg-config,
-  docbook-xsl-nons,
-  docbook_xml_dtd_42,
+  python3,
+  wrapGAppsHook3,
   ...
 }:
 
