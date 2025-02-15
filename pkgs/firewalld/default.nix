@@ -21,6 +21,7 @@ let
   python3' = python3.withPackages (
     ps: with ps; [
       dbus-python
+      nftables
       pygobject3
     ]
   );
