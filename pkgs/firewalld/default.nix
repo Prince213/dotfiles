@@ -4,6 +4,7 @@
   autoreconfHook,
   python3,
   libxslt,
+  glib,
   ...
 }:
 
@@ -22,5 +23,6 @@ stdenv.mkDerivation rec {
     autoreconfHook
     python3
     libxslt
+    glib
   ];
 }
