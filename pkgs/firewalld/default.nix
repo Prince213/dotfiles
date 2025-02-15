@@ -22,6 +22,10 @@ stdenv.mkDerivation rec {
     hash = "sha256-ubE1zMIOcdg2+mgXsk6brCZxS1XkvJYwVY3E+UXIIiU=";
   };
 
+  patches = [
+    ./respect-xml-catalog-files-var.patch
+  ];
+
   nativeBuildInputs = [
     autoreconfHook
     python3
