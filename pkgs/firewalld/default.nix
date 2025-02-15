@@ -11,6 +11,7 @@
   glib,
   pkg-config,
   docbook-xsl-nons,
+  docbook_xml_dtd_42,
   ...
 }:
 
@@ -43,5 +44,6 @@ stdenv.mkDerivation rec {
 
   buildInputs = [
     docbook-xsl-nons
+    docbook_xml_dtd_42
   ];
 }
