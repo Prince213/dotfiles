@@ -176,7 +176,7 @@ in
             service = {
               inherit (value) short description;
               port = lib.forEach value.ports (
-                value': lib.mapAttrs' (name': value'': lib.nameValuePair ("@" + name') value'') value'
+                value': lib.mapAttrs' (name': lib.nameValuePair ("@" + name')) value'
               );
             };
           };
