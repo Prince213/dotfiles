@@ -4,6 +4,14 @@
 
     flake-parts.url = "github:hercules-ci/flake-parts";
 
+    firewalld-nix = {
+      url = "sourcehut:~prince213/firewalld-nix";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-parts.follows = "flake-parts";
+      };
+    };
+
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
