@@ -1,6 +1,11 @@
 {
   services.firewalld = {
     enable = true;
+    services = {
+      localsend = {
+        short = "LocalSend";
+      };
+    };
   };
 
   networking.firewall = {
