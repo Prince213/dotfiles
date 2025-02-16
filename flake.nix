@@ -68,6 +68,7 @@
       self,
       nixpkgs,
       flake-parts,
+      firewalld-nix,
       disko,
       lanzaboote,
       sops-nix,
@@ -97,6 +98,8 @@
                   ./systems/apus
                   ./common/system
                   { nixpkgs.overlays = [ self.overlays.default ]; }
+                  firewalld-nix.nixosModules.default
+                  { services.firewalld.package = inputs'.firewalld-nix.packages.default; }
 
                   disko.nixosModules.disko
                   lanzaboote.nixosModules.lanzaboote
