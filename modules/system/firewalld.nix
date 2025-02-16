@@ -98,6 +98,10 @@ let
         type = lib.types.str;
         default = "";
       };
+      description = lib.mkOption {
+        type = lib.types.str;
+        default = "";
+      };
     };
   };
 in
@@ -135,7 +139,7 @@ in
         lib.nameValuePair "firewalld/services/${name}.xml" {
           source = (pkgs.formats.xml { }).generate "firewalld-service-${name}.xml" {
             service = {
-              inherit (value) short;
+              inherit (value) short description;
             };
           };
         }
