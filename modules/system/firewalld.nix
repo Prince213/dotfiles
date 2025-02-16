@@ -92,6 +92,14 @@ let
       };
     };
   };
+  serviceOptions = {
+    options = {
+      short = lib.mkOption {
+        type = lib.types.str;
+        default = "";
+      };
+    };
+  };
 in
 {
   options.services.firewalld = {
@@ -104,14 +112,34 @@ in
       default = { };
       type = lib.types.submodule settingsOptions;
     };
+    services = lib.mkOption {
+      description = ''
+        firewalld service configuration files. See {manpage}`firewalld.service(5)`.
+      '';
+      default = { };
+      type = lib.types.attrsOf (lib.types.submodule serviceOptions);
+    };
   };
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = [ cfg.package ];
 
-    environment.etc."firewalld/firewalld.conf" = {
-      source = settingsFormat.generate "firewalld.conf" cfg.settings;
-    };
+    environment.etc =
+      {
+        "firewalld/firewalld.conf" = {
+          source = settingsFormat.generate "firewalld.conf" cfg.settings;
+        };
+      }
+      // (lib.mapAttrs' (
+        name: value:
+        lib.nameValuePair "firewalld/services/${name}.xml" {
+          source = (pkgs.formats.xml { }).generate "firewalld-service-${name}.xml" {
+            service = {
+              inherit (value) short;
+            };
+          };
+        }
+      ) cfg.services);
 
     systemd.services.firewalld = {
       description = "firewalld - dynamic firewall daemon";
