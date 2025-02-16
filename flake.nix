@@ -129,7 +129,6 @@
             );
           };
           overlays.default = self: super: {
-            firewalld = self.callPackage ./pkgs/firewalld { };
             wubi98-fonts = self.callPackage ./pkgs/wubi98-fonts.nix { };
             mccgdi = self.callPackage ./pkgs/mccgdi { };
             sing-box-beta = self.callPackage ./pkgs/sing-box-beta.nix { };
@@ -145,7 +144,6 @@
             };
 
             packages = {
-              inherit (pkgs) firewalld;
               inherit (pkgs) wubi98-fonts;
               inherit (pkgs) mccgdi;
               inherit (pkgs) sing-box-beta;
