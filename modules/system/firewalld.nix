@@ -92,6 +92,22 @@ let
       };
     };
   };
+  portOptions = {
+    options = {
+      port = lib.mkOption {
+        type = lib.types.either lib.types.port lib.types.str;
+        default = "";
+      };
+      protocol = lib.mkOption {
+        type = lib.types.enum [
+          "tcp"
+          "udp"
+          "sctp"
+          "dccp"
+        ];
+      };
+    };
+  };
   serviceOptions = {
     options = {
       short = lib.mkOption {
@@ -101,6 +117,10 @@ let
       description = lib.mkOption {
         type = lib.types.str;
         default = "";
+      };
+      ports = lib.mkOption {
+        type = lib.types.listOf (lib.types.submodule portOptions);
+        default = [ ];
       };
     };
   };
@@ -140,6 +160,9 @@ in
           source = (pkgs.formats.xml { }).generate "firewalld-service-${name}.xml" {
             service = {
               inherit (value) short description;
+              port = lib.forEach value.ports (
+                value': lib.mapAttrs' (name': value'': lib.nameValuePair ("@" + name') value'') value'
+              );
             };
           };
         }
