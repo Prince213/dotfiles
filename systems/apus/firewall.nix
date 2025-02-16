@@ -4,6 +4,16 @@
     services = {
       localsend = {
         short = "LocalSend";
+        ports = [
+          {
+            port = 53317;
+            protocol = "tcp";
+          }
+          {
+            port = 53317;
+            protocol = "udp";
+          }
+        ];
       };
     };
   };
