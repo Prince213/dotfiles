@@ -124,6 +124,14 @@ let
       };
     };
   };
+  zoneOptions = {
+    options = {
+      services = lib.mkOption {
+        type = lib.types.listOf lib.types.nonEmptyStr;
+        default = [ ];
+      };
+    };
+  };
 in
 {
   options.services.firewalld = {
@@ -142,6 +150,13 @@ in
       '';
       default = { };
       type = lib.types.attrsOf (lib.types.submodule serviceOptions);
+    };
+    zones = lib.mkOption {
+      description = ''
+        firewalld zone configuration files. See {manpage}`firewalld.zone(5)`.
+      '';
+      default = { };
+      type = lib.types.attrsOf (lib.types.submodule zoneOptions);
     };
   };
 
@@ -166,7 +181,19 @@ in
             };
           };
         }
-      ) cfg.services);
+      ) cfg.services)
+      // (lib.mapAttrs' (
+        name: value:
+        lib.nameValuePair "firewalld/zones/${name}.xml" {
+          source = (pkgs.formats.xml { }).generate "firewalld-zone-${name}.xml" {
+            zone = {
+              service = lib.forEach value.services (value': {
+                "@name" = value';
+              });
+            };
+          };
+        }
+      ) cfg.zones);
 
     systemd.services.firewalld = {
       description = "firewalld - dynamic firewall daemon";
