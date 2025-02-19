@@ -96,6 +96,7 @@
                 ./systems/orion
                 ./common/system
                 disko.nixosModules.disko
+                sops-nix.nixosModules.sops
               ];
             };
             apus = withSystem "x86_64-linux" (

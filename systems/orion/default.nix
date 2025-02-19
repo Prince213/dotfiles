@@ -11,6 +11,7 @@
     ./disk.nix
     ./networking.nix
     ./packages.nix
+    ./secrets.nix
     ./users.nix
   ];
 }
