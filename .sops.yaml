@@ -1,6 +1,7 @@
 keys:
   - &prince213 E0645733CAF3765161044422FF1953A2BDC72EB8
   - &apus age1w4q307t786mn7a2xdvjqh3knasw353z986d8hkjxmqtyt8fp3a8q0sn4yq
+  - &orion age1w0eamqluj6u2eewzfvcmg6jce8rnwc68fkemctv3ugdqxec2q4fsltcfu3
   - &pegasus age10u4x9074jjv2tvwfryt9lpf4wcdtcktv9zwfxspht8yzvcsz0arsqt0t9h
 creation_rules:
   - path_regex: systems/apus/secrets.yaml
