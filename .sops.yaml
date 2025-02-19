@@ -10,6 +10,12 @@ creation_rules:
           - *apus
         pgp:
           - *prince213
+  - path_regex: systems/orion/secrets.yaml
+    key_groups:
+      - age:
+          - *orion
+        pgp:
+          - *prince213
   - path_regex: systems/pegasus/secrets.yaml
     key_groups:
       - age:
