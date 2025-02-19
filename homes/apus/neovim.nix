@@ -1,5 +1,11 @@
 { pkgs, neovim-nightly, ... }:
 {
+  programs.neovide = {
+    enable = true;
+    settings = {
+    };
+  };
+
   programs.nixvim = {
     enable = true;
     package = neovim-nightly.packages.default;
