@@ -91,6 +91,12 @@
                 sops-nix.nixosModules.sops
               ];
             };
+            orion = nixpkgs.lib.nixosSystem {
+              modules = [
+                ./systems/orion
+                ./common/system
+              ];
+            };
             apus = withSystem "x86_64-linux" (
               { inputs', ... }:
               nixpkgs.lib.nixosSystem {
