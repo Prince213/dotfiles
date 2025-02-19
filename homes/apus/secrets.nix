@@ -6,6 +6,7 @@
       ssh-key-pegasus = { };
       ssh-key-nun = { };
       ssh-key-pavo = { };
+      ssh-key-orion = { };
       ssh-key-corvus = { };
       ssh-key-epyc = { };
       ssh-key-andromeda = { };
