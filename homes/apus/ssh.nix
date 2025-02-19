@@ -20,7 +20,7 @@
       orion = {
         host = "orion";
         user = "root";
-        identityFile = config.sops.secrets.ssh-key-pavo.path;
+        identityFile = config.sops.secrets.ssh-key-orion.path;
         identitiesOnly = true;
       };
       pavo = {
