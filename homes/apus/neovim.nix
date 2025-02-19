@@ -3,6 +3,12 @@
   programs.neovide = {
     enable = true;
     settings = {
+      font = {
+        normal = [
+          "Iosevka SS08"
+        ];
+        size = 12;
+      };
     };
   };
 
