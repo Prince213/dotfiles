@@ -95,6 +95,7 @@
               modules = [
                 ./systems/orion
                 ./common/system
+                disko.nixosModules.disko
               ];
             };
             apus = withSystem "x86_64-linux" (
