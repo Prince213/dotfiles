@@ -45,7 +45,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    ghostty.url = "github:ghostty-org/ghostty";
+    # ghostty.url = "github:ghostty-org/ghostty";
 
     neovim-nightly = {
       url = "github:nix-community/neovim-nightly-overlay";
@@ -119,7 +119,7 @@
                       useGlobalPkgs = true;
                       useUserPackages = true;
                       extraSpecialArgs = {
-                        inherit (inputs') ghostty;
+                        # inherit (inputs') ghostty;
                         inherit (inputs') neovim-nightly;
                         inherit (inputs) vscode-extensions;
                       };
