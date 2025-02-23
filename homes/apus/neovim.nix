@@ -5,7 +5,7 @@
     settings = {
       font = {
         normal = [
-          "Iosevka SS08"
+          "Iosevka Curly Slab"
         ];
         size = 12;
       };
