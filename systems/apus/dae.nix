@@ -7,6 +7,7 @@
 {
   services.dae = {
     enable = true;
+    package = pkgs.dae-beta;
     openFirewall = {
       enable = true;
       port = 12345;
