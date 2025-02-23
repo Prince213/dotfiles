@@ -38,6 +38,11 @@
         }
       ];
       route = {
+        rules = [
+          {
+            action = "sniff";
+          }
+        ];
         auto_detect_interface = true;
       };
     };
