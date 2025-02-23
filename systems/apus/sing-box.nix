@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
   services.sing-box = {
     enable = true;
@@ -37,6 +37,10 @@
           strict_route = true;
         }
       ];
+      outbounds = {
+        _secret = config.sops.secrets.sing-box-outbounds.path;
+        quote = false;
+      };
       route = {
         rules = [
           {
