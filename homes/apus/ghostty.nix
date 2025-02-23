@@ -8,6 +8,9 @@
         "Iosevka Term Curly Slab"
         "Noto Serif CJK SC"
       ];
+      font-style = [
+        "Medium"
+      ];
       theme = "ayu";
     };
   };
