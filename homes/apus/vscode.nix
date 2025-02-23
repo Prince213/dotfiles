@@ -16,7 +16,7 @@
         jnoortheen.nix-ide
       ];
     userSettings = {
-      "editor.fontFamily" = "Iosevka SS08";
+      "editor.fontFamily" = "Iosevka Curly Slab";
       "editor.fontLigatures" = true;
       "editor.rulers" = [ 80 ];
       "window.commandCenter" = false;
