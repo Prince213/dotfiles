@@ -142,6 +142,7 @@
           overlays.default = self: super: {
             wubi98-fonts = self.callPackage ./pkgs/wubi98-fonts.nix { };
             mccgdi = self.callPackage ./pkgs/mccgdi { };
+            dae-beta = self.callPackage ./pkgs/dae-beta.nix { };
             sing-box-beta = self.callPackage ./pkgs/sing-box-beta.nix { };
           };
         };
@@ -157,6 +158,7 @@
             packages = {
               inherit (pkgs) wubi98-fonts;
               inherit (pkgs) mccgdi;
+              inherit (pkgs) dae-beta;
               inherit (pkgs) sing-box-beta;
             };
 
