@@ -42,6 +42,10 @@
           {
             action = "sniff";
           }
+          {
+            protocol = "dns";
+            action = "hijack-dns";
+          }
         ];
         auto_detect_interface = true;
         default_domain_resolver = "alidns";
