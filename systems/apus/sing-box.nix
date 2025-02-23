@@ -24,6 +24,22 @@
         ];
         reverse_mapping = true;
       };
+      inbounds = [
+        {
+          type = "tun";
+          interface_name = "singbox0";
+          address = [
+            "172.18.0.1/30"
+            "fdfe:dcba:9876::1/126"
+          ];
+          auto_route = true;
+          auto_redirect = true;
+          strict_route = true;
+        }
+      ];
+      route = {
+        auto_detect_interface = true;
+      };
     };
   };
 }
