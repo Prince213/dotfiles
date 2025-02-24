@@ -4,6 +4,8 @@
 
   hardware.bluetooth.enable = true;
 
+  services.pcscd.enable = true;
+
   services.power-profiles-daemon.enable = false;
 
   programs.steam.enable = true;
