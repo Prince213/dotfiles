@@ -50,6 +50,11 @@
             protocol = "dns";
             action = "hijack-dns";
           }
+          {
+            ip_cidr = "10.0.0.0/8";
+            action = "route";
+            outbound = "direct";
+          }
         ];
         auto_detect_interface = true;
         default_domain_resolver = "alidns";
