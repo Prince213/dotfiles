@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   services.sing-box = {
     enable = true;
@@ -75,4 +80,26 @@
       };
     };
   };
+
+  networking.networkmanager.dispatcherScripts =
+    let
+      systemctl = lib.getExe' pkgs.systemdMinimal "systemctl";
+      service = "sing-box.service";
+    in
+    [
+      {
+        type = "basic";
+        source = pkgs.writeShellScript "start-sing-box" ''
+          if test "x$2" = "xup"; then
+            ${systemctl} start ${service}
+          fi
+        '';
+      }
+      {
+        type = "pre-down";
+        source = pkgs.writeShellScript "stop-sing-box" ''
+          ${systemctl} stop ${service}
+        '';
+      }
+    ];
 }
