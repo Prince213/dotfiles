@@ -8,6 +8,7 @@
 
   imports = [
     ./boot.nix
+    ./caddy.nix
     ./disk.nix
     ./networking.nix
     ./packages.nix
