@@ -15,6 +15,7 @@
           activitywatch.aw-watcher-vscode
           yanivmo.navi-cheatsheet-language
           jnoortheen.nix-ide
+          charliermarsh.ruff
         ];
       userSettings = {
         "editor.fontFamily" = "Iosevka Curly Slab";
