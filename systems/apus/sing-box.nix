@@ -45,6 +45,7 @@
             server = "alidns";
           }
         ];
+        strategy = "ipv4_only";
         reverse_mapping = true;
       };
       inbounds = [
