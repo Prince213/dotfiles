@@ -52,6 +52,7 @@
           }
           {
             ip_cidr = "10.0.0.0/8";
+            domain_suffix = ".edu.cn";
             action = "route";
             outbound = "direct";
           }
