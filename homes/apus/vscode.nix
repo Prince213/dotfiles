@@ -14,6 +14,7 @@
         [
           activitywatch.aw-watcher-vscode
           llvm-vs-code-extensions.vscode-clangd
+          mkhl.direnv
           eamodio.gitlens
           yanivmo.navi-cheatsheet-language
           jnoortheen.nix-ide
