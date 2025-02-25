@@ -28,6 +28,13 @@
             detour = "direct";
           }
         ];
+        rules = [
+          {
+            domain_suffix = ".shanghaitech.edu.cn";
+            action = "route";
+            server = "shtu";
+          }
+        ];
         reverse_mapping = true;
       };
       inbounds = [
