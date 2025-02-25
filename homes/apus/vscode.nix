@@ -13,6 +13,7 @@
         with extensions.open-vsx;
         [
           activitywatch.aw-watcher-vscode
+          eamodio.gitlens
           yanivmo.navi-cheatsheet-language
           jnoortheen.nix-ide
           ms-python.python
