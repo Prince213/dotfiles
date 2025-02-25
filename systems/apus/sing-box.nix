@@ -39,6 +39,11 @@
             action = "route";
             server = "shtu";
           }
+          {
+            domain_suffix = ".edu.cn";
+            action = "route";
+            server = "alidns";
+          }
         ];
         reverse_mapping = true;
       };
