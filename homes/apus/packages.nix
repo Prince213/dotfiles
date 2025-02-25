@@ -17,6 +17,7 @@
 
   home.packages = with pkgs; [
     awatcher
+    bitwarden-desktop
     clang-tools
     flclash
     cinny-desktop
