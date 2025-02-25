@@ -84,6 +84,11 @@
         auto_detect_interface = true;
         default_domain_resolver = "alidns";
       };
+      experimental = {
+        clash_api = {
+          external_controller = "127.0.0.1:9090";
+        };
+      };
     };
   };
 
