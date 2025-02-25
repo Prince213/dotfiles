@@ -21,6 +21,12 @@
             server = "223.5.5.5";
             detour = "direct";
           }
+          {
+            type = "udp";
+            tag = "shtu";
+            server = "10.15.44.11";
+            detour = "direct";
+          }
         ];
         reverse_mapping = true;
       };
