@@ -3,6 +3,7 @@
   programs.ssh = {
     enable = true;
     addKeysToAgent = "1h";
+    controlPath = "none";
     includes = [ config.sops.secrets.ssh-config.path ];
     matchBlocks = {
       pegasus = {
