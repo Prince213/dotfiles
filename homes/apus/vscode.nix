@@ -15,6 +15,7 @@
           activitywatch.aw-watcher-vscode
           yanivmo.navi-cheatsheet-language
           jnoortheen.nix-ide
+          ms-python.python
           charliermarsh.ruff
         ];
       userSettings = {
