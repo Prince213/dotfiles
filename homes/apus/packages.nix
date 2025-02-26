@@ -20,7 +20,6 @@
     bitwarden-desktop
     clang-tools
     flclash
-    cinny-desktop
     hmcl
     wl-clipboard
     localsend
