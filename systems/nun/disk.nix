@@ -2,6 +2,7 @@
   disko.devices = {
     disk.main = {
       device = "/dev/vda";
+      imageSize = "10G";
       content = {
         type = "gpt";
         partitions = {
