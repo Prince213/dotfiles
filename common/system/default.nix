@@ -5,6 +5,8 @@
     ./ssh.nix
   ];
 
+  time.timeZone = lib.mkDefault "Asia/Shanghai";
+
   boot.kernelPackages = lib.mkDefault pkgs.linuxPackages_latest;
 
   boot.loader = {

@@ -4,8 +4,6 @@
   networking.hostName = "apus";
   nixpkgs.hostPlatform = "x86_64-linux";
 
-  time.timeZone = "Asia/Shanghai";
-
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
   imports = [
