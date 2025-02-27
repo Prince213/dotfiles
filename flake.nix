@@ -135,6 +135,7 @@
                 ./systems/nun
                 ./common/system
                 disko.nixosModules.disko
+                sops-nix.nixosModules.sops
               ];
             };
             pegasus = nixpkgs.lib.nixosSystem {
