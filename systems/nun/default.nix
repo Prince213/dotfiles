@@ -3,4 +3,8 @@
 
   networking.hostName = "nun";
   nixpkgs.hostPlatform = "x86_64-linux";
+
+  imports = [
+    ./disk.nix
+  ];
 }

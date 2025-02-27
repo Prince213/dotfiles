@@ -134,6 +134,7 @@
               modules = [
                 ./systems/nun
                 ./common/system
+                disko.nixosModules.disko
               ];
             };
             pegasus = nixpkgs.lib.nixosSystem {
