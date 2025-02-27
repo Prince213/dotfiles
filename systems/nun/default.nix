@@ -12,6 +12,7 @@
     ./networking.nix
     ./packages.nix
     ./secrets.nix
+    ./ssh.nix
     ./users.nix
   ];
 }
