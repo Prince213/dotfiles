@@ -1,4 +1,9 @@
-{ vscode-extensions, pkgs, ... }:
+{
+  config,
+  vscode-extensions,
+  pkgs,
+  ...
+}:
 {
   programs.vscode = {
     enable = true;
@@ -30,6 +35,9 @@
 
         "nix.enableLanguageServer" = true;
         "nix.serverPath" = "nixd";
+        "nix.serverSettings" = {
+          nixd = config.programs.nixvim.plugins.lsp.servers.nixd.settings;
+        };
       };
     };
   };
