@@ -1,6 +1,9 @@
 { config, ... }:
 {
-  networking.useNetworkd = true;
+  networking = {
+    useNetworkd = true;
+    usePredictableInterfaceNames = false;
+  };
   systemd.network = {
     enable = true;
     networks = {
