@@ -8,7 +8,7 @@
         partitions = {
           boot = {
             priority = 1;
-            type = "ef02";
+            type = "EF02";
             size = "1M";
           };
           root = {
