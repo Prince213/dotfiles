@@ -130,6 +130,12 @@
                 sops-nix.nixosModules.sops
               ];
             };
+            nun = nixpkgs.lib.nixosSystem {
+              modules = [
+                ./systems/nun
+                ./common/system
+              ];
+            };
             pegasus = nixpkgs.lib.nixosSystem {
               modules = [
                 ./systems/pegasus
