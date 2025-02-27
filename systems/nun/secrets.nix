@@ -1,6 +1,9 @@
 {
   sops = {
     secrets = {
+      root-password-hash = {
+        neededForUsers = true;
+      };
       network-eth0 = { };
     };
 
