@@ -83,22 +83,6 @@
       {
         flake = {
           nixosConfigurations = {
-            pegasus = nixpkgs.lib.nixosSystem {
-              modules = [
-                ./systems/pegasus
-                ./common/system
-                disko.nixosModules.disko
-                sops-nix.nixosModules.sops
-              ];
-            };
-            orion = nixpkgs.lib.nixosSystem {
-              modules = [
-                ./systems/orion
-                ./common/system
-                disko.nixosModules.disko
-                sops-nix.nixosModules.sops
-              ];
-            };
             apus = withSystem "x86_64-linux" (
               { inputs', ... }:
               nixpkgs.lib.nixosSystem {
@@ -138,12 +122,28 @@
                 ];
               }
             );
+            orion = nixpkgs.lib.nixosSystem {
+              modules = [
+                ./systems/orion
+                ./common/system
+                disko.nixosModules.disko
+                sops-nix.nixosModules.sops
+              ];
+            };
+            pegasus = nixpkgs.lib.nixosSystem {
+              modules = [
+                ./systems/pegasus
+                ./common/system
+                disko.nixosModules.disko
+                sops-nix.nixosModules.sops
+              ];
+            };
           };
           overlays.default = self: super: {
-            wubi98-fonts = self.callPackage ./pkgs/wubi98-fonts.nix { };
-            mccgdi = self.callPackage ./pkgs/mccgdi { };
             dae-beta = self.callPackage ./pkgs/dae-beta.nix { };
+            mccgdi = self.callPackage ./pkgs/mccgdi { };
             sing-box-beta = self.callPackage ./pkgs/sing-box-beta.nix { };
+            wubi98-fonts = self.callPackage ./pkgs/wubi98-fonts.nix { };
           };
         };
         systems = [ "x86_64-linux" ];
@@ -156,10 +156,10 @@
             };
 
             packages = {
-              inherit (pkgs) wubi98-fonts;
-              inherit (pkgs) mccgdi;
               inherit (pkgs) dae-beta;
+              inherit (pkgs) mccgdi;
               inherit (pkgs) sing-box-beta;
+              inherit (pkgs) wubi98-fonts;
             };
 
             devShells.default = pkgs.mkShellNoCC {
